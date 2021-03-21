@@ -2,6 +2,8 @@ package dev.database;
 
 import dev.model.exception.ConstraintViolationException;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Optional;
 
 /**
@@ -10,6 +12,12 @@ import java.util.Optional;
  * @param <I> The type of the id (primary key) of object <T>
  */
 public class GenericDAO<T, I> implements DAO<T, I>{
+
+    private Connection connection;
+
+    public GenericDAO() throws SQLException{
+        this.connection = DBConnection.getInstance().getConnection();
+    }
 
     @Override
     public Optional<T> getById(I id) {

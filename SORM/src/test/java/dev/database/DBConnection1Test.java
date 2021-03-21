@@ -18,6 +18,8 @@ import java.util.Map;
  */
 public class DBConnection1Test {
 
+    //unfortunately when testing a singleton, only one test can be run at a time,
+    // comment the other one and uncomment this one to test it
 //    @Test
 //    public void DBConnection_GetConnection_WithSchema() {
 //        Map<String, String> testMap = new HashMap<>();

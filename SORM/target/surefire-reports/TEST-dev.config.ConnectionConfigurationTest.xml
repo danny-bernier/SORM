@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="dev.config.ConnectionConfigurationTest" time="0.237" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="dev.config.ConnectionConfigurationTest" time="0.224" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,10 +64,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_PartiallyFilledCorrectXML" time="0.196"/>
-  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_PartiallyFilledIncorrectXML" time="0.036"/>
+  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_PartiallyFilledCorrectXML" time="0.184"/>
+  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_PartiallyFilledIncorrectXML" time="0.035"/>
   <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_FullyFilledCorrectXML" time="0.002"/>
   <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_NullFile" time="0"/>
-  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_FileDoesNotExist" time="0.001"/>
-  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_EmptyIncorrectXML" time="0.002"/>
+  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_FileDoesNotExist" time="0.002"/>
+  <testcase classname="dev.config.ConnectionConfigurationTest" name="ConnectionConfiguration_ReadXML_EmptyIncorrectXML" time="0.001"/>
 </testsuite>

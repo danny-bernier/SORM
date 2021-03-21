@@ -1,7 +1,6 @@
 package dev.model.database;
 
 import dev.model.enumeration.SQLDataType;
-
 import java.util.Objects;
 
 /**
@@ -24,6 +23,7 @@ public class DataField<T>{
      *     byte, short, int, long, float, double, Date, Time, Timestamp
      * </p>
      * @param value value to be stored in this DataField.
+     * @throws IllegalArgumentException Thrown when value parameter is null or data type of value is not supported
      */
     private DataField(T value) throws IllegalArgumentException{
         if(value == null)
@@ -45,6 +45,7 @@ public class DataField<T>{
      * @param value value to be stored in this DataField.
      * @param <T> data type of value
      * @return returns a new DataField
+     * @throws IllegalArgumentException Thrown when value parameter is null or data type of value is not supported
      */
     public static <T> DataField<T> createDataField(T value) throws IllegalArgumentException{
         return new DataField<>(value);
