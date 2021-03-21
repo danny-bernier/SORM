@@ -3,7 +3,9 @@
 
 <!--    Edit the below element bodies to define database connection information-->
 <!--    database location-->
-    <url>jdbc:h2:mem:tcp://localhost/~/test</url>
+    <url>jdbc:h2:mem:tcp://localhost/~/test;MODE=PostgreSQL;</url>
+<!--    jdbc:mem:postgresql:test-->
+<!--    jdbc:h2:mem:tcp://localhost/~/test-->
 
 <!--    current schema, may optionally be left empty to use default schema-->
     <schema></schema>

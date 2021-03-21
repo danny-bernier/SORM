@@ -3,7 +3,9 @@ package dev.utility.reflection;
 import dev.model.annotation.SORMField;
 import dev.model.annotation.SORMID;
 import dev.model.annotation.SORMObject;
+import dev.model.annotation.SORMReference;
 import dev.model.database.DataField;
+import dev.model.database.DataReference;
 import dev.model.enumeration.SQLDataType;
 import dev.model.exception.NoSORMIDFoundException;
 import dev.model.exception.NoSORMObjectFoundException;
@@ -114,5 +116,64 @@ public class PropertyGathererTest {
         Assert.assertEquals(SQLDataType.TEXT, l.get(0).getDataType());
         Assert.assertEquals(45, l.get(1).getValue());
         Assert.assertEquals(SQLDataType.INTEGER, l.get(1).getDataType());
+    }
+
+    @Test
+    public void PropertyGathererReferenceFields() throws SORMAccessException {
+
+        @SORMObject
+        class TestEmployee6{
+            @SORMID
+            private String emplID = "872DHAYU2138DJ";
+            @SORMField
+            private String name = "Billy Bob";
+            @SORMField
+            private int age = 45;
+            @SORMReference
+            Object o = new Object();
+            @SORMReference
+            Object o2 = new Object();
+        }
+        TestEmployee6 e = new TestEmployee6();
+        List<DataReference<?>> l = PropertyGatherer.getReference(e);
+        Assert.assertEquals(2, l.size());
+        Assert.assertEquals(e.o, l.get(0).getREFERENCE());
+        Assert.assertEquals(e.o2, l.get(1).getREFERENCE());
+    }
+
+    @Test
+    public void PropertyGathererNoReferenceFields() throws SORMAccessException {
+
+        @SORMObject
+        class TestEmployee6{
+            @SORMID
+            private String emplID = "872DHAYU2138DJ";
+            @SORMField
+            private String name = "Billy Bob";
+            @SORMField
+            private int age = 45;
+        }
+        TestEmployee6 e = new TestEmployee6();
+        List<DataReference<?>> l = PropertyGatherer.getReference(e);
+        Assert.assertEquals(0, l.size());
+    }
+
+    @Test
+    public void PropertyGathererReferenceFieldsButNoSORMObject() {
+
+        class TestEmployee7{
+            @SORMID
+            private String emplID = "872DHAYU2138DJ";
+            @SORMField
+            private String name = "Billy Bob";
+            @SORMField
+            private int age = 45;
+            @SORMReference
+            Object o = new Object();
+            @SORMReference
+            Object o2 = new Object();
+        }
+        TestEmployee7 e = new TestEmployee7();
+        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> PropertyGatherer.getReference(e));
     }
 }

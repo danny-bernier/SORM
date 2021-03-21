@@ -14,6 +14,7 @@ import java.util.Objects;
  */
 public class DataField<T>{
     private T value;
+    private String valueFieldName;
     private SQLDataType dataType;
 
     /**
@@ -23,17 +24,26 @@ public class DataField<T>{
      *     byte, short, int, long, float, double, Date, Time, Timestamp
      * </p>
      * @param value value to be stored in this DataField.
+     * @param valueFieldName The name of the variable field.
      * @throws IllegalArgumentException Thrown when value parameter is null or data type of value is not supported
      */
-    private DataField(T value) throws IllegalArgumentException{
+    private DataField(T value, String valueFieldName) throws IllegalArgumentException{
         if(value == null)
             throw new IllegalArgumentException("Parameter value cannot be null");
+        if(valueFieldName == null)
+            throw new IllegalArgumentException("Parameter valueFieldName cannot be null");
+        if(valueFieldName.equals(""))
+            throw new IllegalArgumentException("Parameter valueFieldName cannot an empty String");
+
         this.value = value;
         SQLDataType tmp = SQLDataType.INVALID.convertToSQLDataType(value);
+
         if(tmp == SQLDataType.INVALID)
             throw new IllegalArgumentException("Value could not be easily converted to SQL data type. " +
                     "\nAcceptable Types: char, String, boolean, BigDecimal, byte, short, int, long, float, double, Date, Time, Timestamp");
+
         this.dataType = tmp;
+        this.valueFieldName = valueFieldName;
     }
 
     /**
@@ -43,12 +53,13 @@ public class DataField<T>{
      *     byte, short, int, long, float, double, Date, Time, Timestamp
      * </p>
      * @param value value to be stored in this DataField.
+     * @param valueFieldName The name of the variable field.
      * @param <T> data type of value
      * @return returns a new DataField
      * @throws IllegalArgumentException Thrown when value parameter is null or data type of value is not supported
      */
-    public static <T> DataField<T> createDataField(T value) throws IllegalArgumentException{
-        return new DataField<>(value);
+    public static <T> DataField<T> createDataField(T value, String valueFieldName) throws IllegalArgumentException{
+        return new DataField<>(value, valueFieldName);
     }
 
     /**
@@ -65,12 +76,19 @@ public class DataField<T>{
         return dataType;
     }
 
+    /**
+     * @return Returns name of objects value
+     */
+    public String getValueFieldName() {
+        return valueFieldName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DataField<?> dataField = (DataField<?>) o;
-        return value.equals(dataField.value) && dataType == dataField.dataType;
+        return value.equals(dataField.value) && valueFieldName.equals(dataField.valueFieldName) && dataType == dataField.dataType;
     }
 
     @Override

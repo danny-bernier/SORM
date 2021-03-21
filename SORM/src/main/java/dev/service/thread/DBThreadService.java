@@ -1,6 +1,6 @@
 package dev.service.thread;
 
-import dev.database.GenericDAO;
+import dev.database.SORMDAO;
 
 import java.sql.SQLException;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public class DBThreadService {
 
     public <T, I> Future<Optional<T>> getByID(I ID){
         Callable callable = () -> {
-            GenericDAO<T, I> dao = new GenericDAO<>();
+            SORMDAO<T, I> dao = new SORMDAO<>();
             return dao.getById(ID);
         };
 
@@ -25,14 +25,14 @@ public class DBThreadService {
 
     public <T, I> Future<?> create(T object){
         Runnable runnable = () -> {
-            GenericDAO<T, I> dao = null;
+            SORMDAO<T, I> dao = null;
             try {
-                dao = new GenericDAO<>();
+                dao = new SORMDAO<>();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
             assert dao != null;
-            dao.create(object);
+            //dao.create(object);
         };
 
         return executorService.submit(runnable);

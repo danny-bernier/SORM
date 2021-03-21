@@ -17,27 +17,25 @@ public interface DAO<T, I> {
      * @return an optional of the object created from the database entry
      * @param id id of the object being retrieved from the database
      */
-    Optional<T> getById(I id);
+    Optional<T> getById(I id) throws Exception;
 
     /**
      * Creates a database entry representing an object
      * @param object The object being added to the database
      * @return If object was successfully added to the database
-     * @throws ConstraintViolationException Thrown if object's properties violated some database field constraint
      */
-    boolean create(T object) throws ConstraintViolationException;
+    boolean create(T object) throws Exception;
 
     /**
      * Updates a database entry representing the changed object
      * @param object The object being updated in the database
      * @return If object was successfully updated in the database
-     * @throws ConstraintViolationException Thrown if object's properties violated some database field constraint
      */
-    boolean update(T object) throws ConstraintViolationException;
+    boolean update(T object) throws Exception;
 
     /**
      * Deletes a database entry representing an object
      * @param object The object being deleted from the database
      */
-    void delete(T object);
+    void delete(T object) throws Exception;
 }
