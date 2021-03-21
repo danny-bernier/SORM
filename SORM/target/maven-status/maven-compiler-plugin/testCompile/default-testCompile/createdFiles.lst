@@ -1,0 +1,7 @@
+dev\model\exception\XMLConfigurationExceptionTest.class
+dev\config\ConnectionConfigurationTest.class
+dev\model\enumeration\SQLDataTypeTest.class
+TestDriver.class
+dev\database\DBConnection1Test.class
+dev\model\database\DataFieldTest.class
+dev\model\exception\ConstraintViolationExceptionTest.class

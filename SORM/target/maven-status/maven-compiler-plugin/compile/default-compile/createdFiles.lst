@@ -1,0 +1,16 @@
+dev\database\DAO.class
+dev\model\annotation\SORM.class
+Driver.class
+dev\reflection\PropertyGatherer.class
+dev\database\DBConnection$1.class
+dev\model\enumeration\SQLDataType.class
+dev\model\annotation\SORMField.class
+dev\model\annotation\SORMID.class
+dev\SORM.class
+dev\config\ConnectionConfiguration.class
+dev\database\DBConnection$LazyHolder.class
+dev\model\exception\XMLConfigurationException.class
+dev\model\exception\ConstraintViolationException.class
+dev\database\DBConnection.class
+dev\database\GenericDAO.class
+dev\model\database\DataField.class

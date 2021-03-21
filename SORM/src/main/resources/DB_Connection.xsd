@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<db:schema xmlns:db="http://www.w3.org/2001/XMLSchema">
+
+    <db:element name="connection">
+       <db:complexType>
+           <db:sequence>
+               <db:element name="url" type="db:string" minOccurs="1" maxOccurs="1"/>
+               <db:element name="schema" type="db:string" minOccurs="0" maxOccurs="1"/>
+               <db:element name="user" type="db:string" minOccurs="1" maxOccurs="1"/>
+               <db:element name="password" type="db:string" minOccurs="1" maxOccurs="1"/>
+           </db:sequence>
+       </db:complexType>
+    </db:element>
+
+</db:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<connection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../resources/DB_Connection.xsd">
+
+    <!--    Edit the below element bodies to define database connection information-->
+    <!--    database location-->
+    <url></url>
+
+    <!--    current schema, may optionally be left empty to use default schema-->
+    <schema></schema>
+
+    <!--    user to be logged in as-->
+    <user></user>
+
+    <!--    user's password, may optionally be left empty if user requires no password-->
+    <password></password>
+</connection>
