@@ -1,8 +1,9 @@
 
+import dev.database.DBConnection;
+
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
 import java.util.Enumeration;
 
 public class TestDriver {
@@ -28,6 +29,40 @@ public class TestDriver {
 //            System.out.println(r.getInt("id"));
 //        System.out.println(con);
         //----------------------------------------------------------------------------------------
+
+        //-------Testing to check if a table exists-----------------
+        Connection con = DBConnection.getInstance().getConnection();
+        PreparedStatement ps = con.prepareStatement("create table f(id Integer)");
+        ps.executeUpdate();
+        ps = con.prepareStatement("insert into f values (3)");
+        ps.executeUpdate();
+        ps = con.prepareStatement("select * from f");
+        ResultSet r = ps.executeQuery();
+        while(r.next())
+            System.out.println(r.getInt("id"));
+        //System.out.println(con);
+//        try {
+//            ps = con.prepareStatement("select 1 from foo");
+//            ps.executeQuery();
+//            System.out.println("its real");
+//        } catch (SQLException ignored){
+//            System.out.println("its not there");
+//        }
+        try {
+            ps = con.prepareStatement("select 1 from f");
+            ps.executeQuery();
+            System.out.println("table already exists");
+        } catch (SQLException ignored){
+            try {
+                ps = con.prepareStatement("create table f(name Text)");
+                ps.executeUpdate();
+                System.out.println("its a new table");
+            } catch (SQLException e){
+                e.printStackTrace();
+                System.out.println("Table did not exist but I couldnt make it :(");
+            }
+        }
+        //------------------------------------------------------------------------------------------------
 
     }
 }
