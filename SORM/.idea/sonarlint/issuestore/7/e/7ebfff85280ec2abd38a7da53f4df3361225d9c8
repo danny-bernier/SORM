@@ -1,0 +1,7 @@
+
+b	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(½ŒáÄ8õàæ³…/
+o
+java:S1128"MRemove this unused import 'dev.model.exception.ConstraintViolationException'.(¥…ÓÛúÿÿÿÿ8™óè³…/
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ùı©Ÿÿÿÿÿÿ8§—æ³…/
+b	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(¼ºŞ”8±¾æ³…/
+b	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(üÑ•ï8ÙÓè³…/

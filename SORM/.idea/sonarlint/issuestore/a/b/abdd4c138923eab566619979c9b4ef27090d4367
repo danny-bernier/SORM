@@ -1,0 +1,23 @@
+
+R
+java:S1066ú"/Merge this if statement with the enclosing one.(‰Šïíýÿÿÿÿ8Ì—è¾…/
+£
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š‡öòÿÿÿÿÿ8Ì—è¾…/
+v	java:S116"URename this field "CONNECTION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤œ²íÿÿÿÿÿ8…•ã³…/
+U
+java:S1135²"2Complete the task associated to this TODO comment.(¡Ô¦©þÿÿÿÿ8‚Õ€¿…/
+J	java:S108"")Either remove or fill this block of code.(ÕËŸ±ýÿÿÿÿ8Ì—è¾…/
+O
+java:S1135|"2Complete the task associated to this TODO comment.(¹ÇÈ»8Ì—è¾…/
+v	java:S131…"YComplete cases by adding the missing enum constants or add a default case to this switch.(§ï¢8Í‰ù¾…/
+{	java:S131³"YComplete cases by adding the missing enum constants or add a default case to this switch.(Ð ƒÏþÿÿÿÿ8ôëû¾…/
+u	java:S116"YRename this field "OBJECT_T_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®œå–8…•ã³…/
+G
+java:S1481j"*Remove this unused "field" local variable.(Êó’Ó8Ì—è¾…/
+P
+java:S1068".Remove this unused "ID_I_CLASS" private field.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
+O
+java:S1135„"2Complete the task associated to this TODO comment.(žŒ§>8œ¼ú¾…/
+v	java:S116"URename this field "ID_I_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
+E
+java:S1481p"(Remove this unused "ref" local variable.(’µˆþ8Ì—è¾…/

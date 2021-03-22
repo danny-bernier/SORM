@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: dev.config.ConnectionConfigurationTest
+Test set: dev.model.database.SORMDAOTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.392 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.057 sec

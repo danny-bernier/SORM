@@ -1,0 +1,14 @@
+
+C
+java:S1452"&Remove usage of generic wildcard type.(˜û•é8²Ò×®…/
+J
+java:S1172"-Remove this unused method parameter "object".(˜û•é8ş®ê³…/
+]	java:S125#"<This block of commented-out lines of code should be removed.(ùûĞùÿÿÿÿ8ş®ê³…/
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°›¿:8’ÛÁ®…/
+w	java:S116"[Rename this field "THREAD_POOL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øù¦Ğ8×ûï­…/
+>
+java:S1170"!Make this final field static too.(øù¦Ğ8×ûï­…/
+T
+java:S1135"2Complete the task associated to this TODO comment.(ş·øÿÿÿÿÿ8õµØ®…/
+Q
+java:S3740"/Provide the parametrized type for this generic.(åêßîıÿÿÿÿ8Üá£®…/

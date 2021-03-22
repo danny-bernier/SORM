@@ -1,0 +1,17 @@
+
+t
+java:S1192,"WDefine a constant instead of duplicating this literal "One or more fields in " 3 times.(ùµÂÔ8©ÿþ³…/
+³
+java:S1192,"•Define a constant instead of duplicating this literal " could not be read, ensure annotated field is accessible and of a supported datatype" 3 times.(ùµÂÔ8©ÿþ³…/
+W
+java:S1118":Add a private constructor to hide the implicit public one.(ë¤‘²8‚âÉ¯…/
+¼
+java:S1192$"™Define a constant instead of duplicating this literal "No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject" 3 times.(Ï“òŸøÿÿÿÿ8ª¦ö³…/
+]
+java:S1610"@Convert the abstract class "PropertyGatherer" into an interface.(ë¤‘²8º½Ê¯…/
+N
+java:S3011=",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8«Ù¬°…/
+N
+java:S3011R",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8ª¦ö³…/
+N
+java:S3011(",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Ž¯¬°…/

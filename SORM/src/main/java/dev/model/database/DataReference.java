@@ -10,7 +10,7 @@ package dev.model.database;
 public class DataReference<T> {
     private final T REFERENCE;
     private final String REFERENCE_NAME;
-    private final DataField<?> REFERENCES_ID;
+    private final DataField<Object> REFERENCES_ID;
 
     /**
      * Data reference is the representation of a foreign key
@@ -18,7 +18,7 @@ public class DataReference<T> {
      * @param referenceName The name of that object variable/field
      * @throws IllegalArgumentException Thrown when either parameter is null or when referenceName is an empty String
      */
-    private DataReference(T reference, String referenceName, DataField<?> referenceID) throws IllegalArgumentException{
+    private DataReference(T reference, String referenceName, DataField<Object> referenceID) throws IllegalArgumentException{
         if(reference == null)
             throw new IllegalArgumentException("Parameter reference cannot be null");
         if(referenceName == null)
@@ -37,8 +37,8 @@ public class DataReference<T> {
      * @param referenceName The name of that object variable/field
      * @throws IllegalArgumentException Thrown when either parameter is null or when referenceName is an empty String
      */
-    public static <T> DataReference<T> createDataReference(T reference, String referenceName, DataField<?> referenceID) throws IllegalArgumentException {
-        return new DataReference<>(reference, referenceName, referenceID);
+    public static <T> DataReference<T> createDataReference(T reference, String referenceName, DataField<Object> referenceID) throws IllegalArgumentException {
+        return new DataReference<T>(reference, referenceName, referenceID);
     }
 
     public T getREFERENCE() {
@@ -49,7 +49,7 @@ public class DataReference<T> {
         return REFERENCE_NAME;
     }
 
-    public DataField<?> getREFERENCES_ID() {
+    public DataField<Object> getREFERENCES_ID() {
         return REFERENCES_ID;
     }
 }

@@ -72,7 +72,7 @@ public class TestDriver {
         @SORMObject
         class PotatoReference{
             @SORMID
-            String babyID = "131287DHUHD1238H";
+            int babyCode = 31;
         }
 
         @SORMObject
@@ -88,6 +88,14 @@ public class TestDriver {
         SORMDAO<Potato, Integer> dao = new SORMDAO<>();
         Potato p = new Potato();
         dao.create(p);
+
+        Connection con = DBConnection.getInstance().getConnection();
+        System.out.println("3");
+        PreparedStatement ps = con.prepareStatement("select 1 from Potato");
+        System.out.println("4");
+        ResultSet r = ps.executeQuery();
+        System.out.println("5");
+        System.out.println(r);
 
     }
 }

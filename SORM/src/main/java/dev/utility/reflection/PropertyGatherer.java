@@ -31,19 +31,17 @@ public abstract class PropertyGatherer {
      * @throws SORMAccessException Thrown when a field could not be accessed
      * @throws NoSORMObjectFoundException Thrown when the Object parameter does not have a {@link SORMObject} annotation on its class definition
      */
-    public static List<DataField<?>> getFields (Object o) throws SORMAccessException, NoSORMObjectFoundException{
+    public static List<DataField<Object>> getFields (Object o) throws SORMAccessException, NoSORMObjectFoundException{
         if(!o.getClass().isAnnotationPresent(SORMObject.class))
             throw new NoSORMObjectFoundException("No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject");
-        List<DataField<?>> dataFields = new ArrayList<>();
+        List<DataField<Object>> dataFields = new ArrayList<>();
         try {
             for (Field f : o.getClass().getDeclaredFields()) {
                 f.setAccessible(true);
                 if (f.isAnnotationPresent(SORMField.class))
                     dataFields.add(DataField.createDataField(f.get(o), f.getName()));
             }
-        } catch (IllegalAccessException e){
-            throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");
-        }
+        } catch (IllegalAccessException e){throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");}
         return dataFields;
     }
 
@@ -55,7 +53,7 @@ public abstract class PropertyGatherer {
      * @throws NoSORMObjectFoundException Thrown when the Object parameter does not have a {@link SORMObject} annotation on its class definition
      * @throws SORMAccessException Thrown when an ID field could not be accessed
      */
-    public static DataField<?> getID (Object o) throws NoSORMIDFoundException, NoSORMObjectFoundException, SORMAccessException {
+    public static DataField<Object> getID (Object o) throws NoSORMIDFoundException, NoSORMObjectFoundException, SORMAccessException {
         if(!o.getClass().isAnnotationPresent(SORMObject.class))
             throw new NoSORMObjectFoundException("No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject");
         try {
@@ -64,9 +62,7 @@ public abstract class PropertyGatherer {
                 if (f.isAnnotationPresent(SORMID.class))
                     return DataField.createDataField(f.get(o), f.getName());
             }
-        }catch (IllegalAccessException ignored) {
-            throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");
-        }
+        }catch (IllegalAccessException ignored) {throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");}
         throw new NoSORMIDFoundException("No appropriate @SORMID annotation was found, ensure this data field is present and accessible, and that is is of a supported datatype");
     }
 
@@ -77,10 +73,10 @@ public abstract class PropertyGatherer {
      * @throws NoSORMObjectFoundException Thrown when the Object parameter does not have a {@link SORMObject} annotation on its class definition
      * @throws SORMAccessException Thrown when a field could not be accessed
      */
-    public static List<DataReference<?>> getReference (Object o) throws NoSORMObjectFoundException, SORMAccessException {
+    public static List<DataReference<Object>> getReference (Object o) throws NoSORMObjectFoundException, SORMAccessException {
         if(!o.getClass().isAnnotationPresent(SORMObject.class))
             throw new NoSORMObjectFoundException("No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject");
-        List<DataReference<?>> references = new ArrayList<>();
+        List<DataReference<Object>> references = new ArrayList<>();
         try {
             for (Field f : o.getClass().getDeclaredFields()) {
                 f.setAccessible(true);
@@ -88,9 +84,7 @@ public abstract class PropertyGatherer {
                     references.add(DataReference.createDataReference(f.get(o), f.getName(), getID(f.get(o))));
                 }
             }
-        }catch (IllegalAccessException ignored) {
-            throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");
-        }
+        }catch (IllegalAccessException ignored) {throw new SORMAccessException("One or more fields in " + o.getClass().getSimpleName() + " could not be read, ensure annotated field is accessible and of a supported datatype");}
         return references;
     }
 }
