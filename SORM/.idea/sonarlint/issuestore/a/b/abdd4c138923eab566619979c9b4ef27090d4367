@@ -1,23 +1,40 @@
 
-R
-java:S1066ú"/Merge this if statement with the enclosing one.(‰Šïíıÿÿÿÿ8Ì—è¾…/
-£
-java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š‡öòÿÿÿÿÿ8Ì—è¾…/
-v	java:S116"URename this field "CONNECTION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤œ²íÿÿÿÿÿ8…•ã³…/
+V
+java:S1481Á"3Remove this unused "numberOfFields" local variable.(Û¡Íøıÿÿÿÿ8é †/
 U
-java:S1135²"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8‚Õ€¿…/
-J	java:S108"")Either remove or fill this block of code.(ÕËŸ±ıÿÿÿÿ8Ì—è¾…/
+java:S1481Â"7Remove this unused "numberOfReferences" local variable.(Ùéˆû8»”«†/
 O
-java:S1135|"2Complete the task associated to this TODO comment.(¹ÇÈ»8Ì—è¾…/
-v	java:S131…"YComplete cases by adding the missing enum constants or add a default case to this switch.(§ï¢8Í‰ù¾…/
-{	java:S131³"YComplete cases by adding the missing enum constants or add a default case to this switch.(Ğ ƒÏşÿÿÿÿ8ôëû¾…/
-u	java:S116"YRename this field "OBJECT_T_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®œå–8…•ã³…/
-G
-java:S1481j"*Remove this unused "field" local variable.(Êó’Ó8Ì—è¾…/
-P
-java:S1068".Remove this unused "ID_I_CLASS" private field.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
+java:S1135ğ"2Complete the task associated to this TODO comment.(Œ§>8»”«†/
+T
+java:S1135z"2Complete the task associated to this TODO comment.(Ğ—¬øÿÿÿÿ8ï¥Ò†/
+Š
+java:S1192g"hDefine a constant instead of duplicating this literal "Data type is INVALID, and not supported" 9 times.(”çÒğûÿÿÿÿ8»”«†/
+H
+java:S1481¯"*Remove this unused "field" local variable.(Êó’Ó8»”«†/
+e
+java:S1192Í"GDefine a constant instead of duplicating this literal " = ?, " 3 times.(ÛãÑ‰8»”«†/
+R
+java:S1066ê"/Merge this if statement with the enclosing one.(‰Šïíıÿÿÿÿ8»”«†/
+u
+java:S3776°"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(•š¤úøÿÿÿÿ8»”«†/
+U
+java:S1135â"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+U
+java:S1135Á"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+U
+java:S1135 "2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+v	java:S116"URename this field "ID_I_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
+ƒ
+java:S1192‹"`Define a constant instead of duplicating this literal "Parameter object cannot be null" 3 times.(ó˜Ëİùÿÿÿÿ8»”«†/
+v	java:S116"URename this field "CONNECTION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤œ²íÿÿÿÿÿ8…•ã³…/
+U
+java:S1135Ï"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+M
+java:S1481½"/Remove this unused "dataFields" local variable.(ñƒ€¿8»”«†/
+u	java:S116"YRename this field "OBJECT_T_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®œå–8…•ã³…/
 O
-java:S1135„"2Complete the task associated to this TODO comment.(Œ§>8œ¼ú¾…/
-v	java:S116"URename this field "ID_I_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
-E
-java:S1481p"(Remove this unused "ref" local variable.(’µˆş8Ì—è¾…/
+java:S1135‘"2Complete the task associated to this TODO comment.(Œ§>8»”«†/
+F
+java:S1481µ"(Remove this unused "ref" local variable.(’µˆş8»”«†/
+U
+java:S1135Á"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/

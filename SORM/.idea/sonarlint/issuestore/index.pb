@@ -17,10 +17,6 @@ _
 /src/test/java/dev/config/DB_ConnectionTest2.xml,a\f\af3c70a8abaf57dd9984dda3620b51fc288b41dd
 K
 src/main/java/dev/SORM.java,9\7\9754620d25605a6745ef141f040b4491eee3191d
-s
-Csrc/main/java/dev/model/exception/ConstraintViolationException.java,8\8\88e0f2d91b1fda706cc04959fa2ba4fa9794745e
-w
-Gsrc/test/java/dev/model/exception/ConstraintViolationExceptionTest.java,3\6\360d9d269cb82e445229b372f8765bb143e0ef8e
 a
 1src/main/java/dev/model/annotation/SORMField.java,f\f\ffd70a74f050528a691cbfde7ac0f39aa579bc3a
 ^
@@ -73,3 +69,11 @@ q
 Asrc/main/java/dev/model/exception/NoSORMObjectFoundException.java,d\9\d9d4f7863ea02ad4228a092f2c634215228c0adb
 W
 'src/main/java/dev/database/SORMDAO.java,a\b\abdd4c138923eab566619979c9b4ef27090d4367
+s
+Csrc/main/java/dev/model/exception/SORMObjectRetrievalException.java,d\a\da3b4503930090a28d0b3b0137f96514eb1aa798
+s
+Csrc/main/java/dev/model/exception/SORMReservedKeywordException.java,2\4\24ccfd7adba38cd5a977e37be29e14a00f647ef5
+w
+Gsrc/test/java/dev/model/exception/SORMObjectRetrievalExceptionTest.java,9\d\9dc06197e1db977977ef7d05f1f5daeb93445d90
+g
+7src/test/java/dev/model/database/DataReferenceTest.java,e\5\e535224492e9a80dab008c5341432aad159375a7

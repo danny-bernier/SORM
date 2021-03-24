@@ -1,9 +1,6 @@
 package dev.utility.reflection;
 
-import dev.model.annotation.SORMReference;
-import dev.model.annotation.SORMField;
-import dev.model.annotation.SORMID;
-import dev.model.annotation.SORMObject;
+import dev.model.annotation.*;
 import dev.model.database.DataField;
 import dev.model.database.DataReference;
 import dev.model.exception.NoSORMIDFoundException;
@@ -23,7 +20,7 @@ import java.util.List;
  *      {@link SORMReference} to mark an object as a foreign key (has-a relationship)
  *  </p>
  */
-public abstract class PropertyGatherer {
+public class POJOPropertyGetSet {
 
     /**
      * Gathers list of DataFields of object marked by {@link SORMField}
@@ -82,7 +79,7 @@ public abstract class PropertyGatherer {
      * @throws NoSORMIDFoundException  Thrown when the ID could not be accessed/does not exist
      * @throws NoSORMObjectFoundException Thrown when the Object parameter does not have a {@link SORMObject} annotation on its class definition
      */
-    public static String getIDNameByClass (Class clazz) throws NoSORMObjectFoundException, SORMAccessException {
+    public static String getIDNameByClass (Class clazz) throws NoSORMObjectFoundException {
         if(!clazz.isAnnotationPresent(SORMObject.class))
             throw new NoSORMObjectFoundException("No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject");
         for (Field f : clazz.getDeclaredFields()) {
@@ -111,6 +108,11 @@ public abstract class PropertyGatherer {
                 if (f.isAnnotationPresent(SORMReference.class)) {
                     if (f.getName().equalsIgnoreCase("serialization"))
                         throw new SORMReservedKeywordException("Properties/fields with SORM annotations may not be named 'serialization' as that is a reserved keyword for SORM");
+
+                    //todo remove bread
+//                    System.out.println("f.get(o)");
+//                    System.out.println(getID(f.get(o)) + f.getName());
+
                     references.add(DataReference.createDataReference(f.get(o), f.getName(), getID(f.get(o))));
                 }
             }

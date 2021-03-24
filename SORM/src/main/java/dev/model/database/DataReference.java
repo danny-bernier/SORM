@@ -1,5 +1,7 @@
 package dev.model.database;
 
+import java.util.Objects;
+
 /**
  * Data reference is the representation of a foreign key
  * <p>
@@ -25,6 +27,8 @@ public class DataReference<T> {
             throw new IllegalArgumentException("Parameter referenceName cannot be null");
         if(referenceName.equals(""))
             throw new IllegalArgumentException("Parameter referenceName cannot be an empty String");
+        if(referenceID == null)
+            throw new IllegalArgumentException("Parameter referenceID cannot be null");
 
         this.REFERENCES_ID = referenceID;
         this.REFERENCE = reference;
@@ -51,5 +55,27 @@ public class DataReference<T> {
 
     public DataField<Object> getREFERENCES_ID() {
         return REFERENCES_ID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DataReference<?> that = (DataReference<?>) o;
+        return REFERENCE.equals(that.REFERENCE) && REFERENCE_NAME.equals(that.REFERENCE_NAME) && REFERENCES_ID.equals(that.REFERENCES_ID);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(REFERENCE, REFERENCE_NAME, REFERENCES_ID);
+    }
+
+    @Override
+    public String toString() {
+        return "DataReference{" +
+                "REFERENCE=" + REFERENCE +
+                ", REFERENCE_NAME='" + REFERENCE_NAME + '\'' +
+                ", REFERENCES_ID=" + REFERENCES_ID +
+                '}';
     }
 }

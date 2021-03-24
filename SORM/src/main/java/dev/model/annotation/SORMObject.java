@@ -14,6 +14,7 @@ import java.lang.annotation.Target;
  * use {@link SORMID} to mark property as ID (primary key)
  * use {@link SORMField} to mark property as a field to be stored in the database
  * use {@link SORMReference} to mark an object as a foreign key (has-a relationship)
+ * use {@link SORMNoArgConstructor} to mark a no argument constructor for use recreating retrieved POJO
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)

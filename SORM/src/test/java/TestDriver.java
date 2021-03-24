@@ -1,15 +1,14 @@
 
-import dev.database.DBConnection;
 import dev.database.SORMDAO;
-import dev.model.annotation.SORMField;
-import dev.model.annotation.SORMID;
-import dev.model.annotation.SORMObject;
-import dev.model.annotation.SORMReference;
+import dev.model.annotation.*;
+import dev.model.database.DataField;
+import dev.model.database.DataReference;
+import dev.utility.reflection.POJOPropertyGetSet;
 
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.sql.*;
-import java.util.Enumeration;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Optional;
 
 public class TestDriver {
     public static void main(String[] args) throws Exception {
@@ -69,33 +68,163 @@ public class TestDriver {
 //        }
         //------------------------------------------------------------------------------------------------
 
-        @SORMObject
-        class PotatoReference{
-            @SORMID
-            int babyCode = 31;
-        }
+//        @SORMObject
+//        class PotatoReference implements Serializable {
+//            @SORMID
+//            int babyCode = 31;
+//        }
+//
+//        @SORMObject
+//        class Potato implements Serializable {
+//            @SORMID
+//            int spudID = 25;
+//            @SORMField
+//            String name;
+//            @SORMReference
+//            PotatoReference potatoReference = new PotatoReference();
+//            public Potato(String name){
+//                this.name = name;
+//            }
+//        }
+//
+//        SORMDAO<Potato, Integer> dao = new SORMDAO<>(Potato.class, Integer.class);
+//        Potato p = new Potato("Tony");
+//        dao.create(p);
+//        Optional<Potato> po = dao.getById(p.spudID);
+//        if(po.isPresent())
+//            System.out.println(po.get().name);
+//        else
+//            System.out.println("empty optional");
+//        Potato p3 = new Potato("Billy");
+//        dao.update(p3);
+//        Optional<Potato> p3o = dao.getById(p.spudID);
+//        if(p3o.isPresent())
+//            System.out.println(p3o.get().name);
+//        else
+//            System.out.println("empty optional");
+//        dao.delete(p3);
+//        p3o = dao.getById(p.spudID);
+//        if(p3o.isPresent())
+//            System.out.println(p3o.get().name);
+//        else
+//            System.out.println("empty optional");
 
-        @SORMObject
-        class Potato{
-            @SORMID
-            int spudID = 25;
-            @SORMField
-            String name = "Tony Potato";
-            @SORMReference
-            PotatoReference potatoReference = new PotatoReference();
-        }
+        //-----------------------------------------------------------
 
-        SORMDAO<Potato, Integer> dao = new SORMDAO<>();
-        Potato p = new Potato();
-        dao.create(p);
+//        Connection con = DBConnection.getInstance().getConnection();
+//        System.out.println("3");
+//        PreparedStatement ps = con.prepareStatement("select * from Potato");
+//        System.out.println("4");
+//        ResultSet r = ps.executeQuery();
+//        System.out.println("5");
+//        System.out.println(r);
+//
+//        r.next();
+//        //retrieveing and rebuilding object
+//        byte[] buf = r.getBytes(4);
+//        ObjectInputStream objectIn = null;
+//        if (buf != null)
+//            objectIn = new ObjectInputStream(new ByteArrayInputStream(buf));
+//
+//        assert objectIn != null;
+//        Object deSerializedObject = objectIn.readObject();
+//        Potato ne = (Potato)deSerializedObject;
+//        System.out.println(ne.name);
+        //------------------------------------------------------------------
+        //---------------------Reconstructing POJO with reflections--------------
+//        Class<User> clazz = User.class;
+//        Constructor[] constructors = clazz.getDeclaredConstructors();
+//        Constructor noArg;
+//        for (Constructor c:constructors) {
+//            if(c.isAnnotationPresent(SORMNoArgConstructor.class)) {
+//                c.setAccessible(true);
+//                noArg = c;
+//                User object = (User) noArg.newInstance();
+//
+//                System.out.println(object.toString());
+//
+//                DataField<?> id = POJOPropertyGetSet.getID(object);
+//                List<DataField<Object>> fields = POJOPropertyGetSet.getFields(object);
+//                List<DataReference<Object>> references = POJOPropertyGetSet.getReference(object);
+//                Field idField = clazz.getDeclaredField(id.getValueFieldName());
+//                idField.setAccessible(true);
+//                idField.set(object, 155);
+//
+//                for (DataField<Object> f:fields) {
+//                    Field field = clazz.getDeclaredField(f.getValueFieldName());
+//                    field.setAccessible(true);
+//                    field.set(object, "TEST STRING");
+//                }
+//
+//                System.out.println(object.toString());
+//            }
+//        }
+        //---------------------------------------------------------------------------
+        User u = new User("Bob", "b@g.com", 23, new Car("Toyota", "Truck", 999000));
+        SORMDAO<User, Integer> dao = new SORMDAO<>(User.class, Integer.class);
+        System.out.println(dao.create(u));
+        Optional<User> ou = dao.getById(23);
+        System.out.println(ou.isPresent());
+        System.out.println(u = ou.get());
+        System.out.println(u.myCar);
+    }
+}
 
-        Connection con = DBConnection.getInstance().getConnection();
-        System.out.println("3");
-        PreparedStatement ps = con.prepareStatement("select 1 from Potato");
-        System.out.println("4");
-        ResultSet r = ps.executeQuery();
-        System.out.println("5");
-        System.out.println(r);
+@SORMObject
+class User{
+    @SORMID
+    private int id;
+    @SORMField
+    private String name = "";
+    @SORMField
+    private String email = "";
+    @SORMReference
+    public Car myCar = new Car("Ford", "Focus",  83774561);
 
+    @SORMNoArgConstructor
+    private User(){}
+
+    public User(String name, String email, int id, Car car){
+        this.name = name;
+        this.email = email;
+        this.id = id;
+        this.myCar = car;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+}
+
+@SORMObject
+class Car{
+    @SORMID
+    private int vin;
+    @SORMField
+    private String make = "";
+    @SORMField
+    private String model = "";
+
+    @SORMNoArgConstructor
+    private Car(){}
+
+    public Car(String make, String model, int vin){
+        this.make = make;
+        this.model = model;
+        this.vin = vin;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "vin=" + vin +
+                ", make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }

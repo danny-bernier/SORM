@@ -16,9 +16,9 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 /**
- * testing {@link PropertyGatherer}
+ * testing {@link POJOPropertyGetSet}
  */
-public class PropertyGathererTest {
+public class POJOPropertyGetSetTest {
 
     @Test
     public void PropertyGathererValidObject() throws SORMAccessException {
@@ -32,8 +32,8 @@ public class PropertyGathererTest {
             int age = 45;
         }
         TestEmployee e = new TestEmployee();
-        DataField<?> d = PropertyGatherer.getID(e);
-        List<DataField<Object>> l = PropertyGatherer.getFields(e);
+        DataField<?> d = POJOPropertyGetSet.getID(e);
+        List<DataField<Object>> l = POJOPropertyGetSet.getFields(e);
         Assert.assertEquals("872DHAYU2138DJ", d.getValue());
         Assert.assertEquals(SQLDataType.TEXT, d.getDataType());
         Assert.assertEquals("Billy Bob", l.get(0).getValue());
@@ -54,8 +54,8 @@ public class PropertyGathererTest {
             int age = 45;
         }
         TestEmployee2 e = new TestEmployee2();
-        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> PropertyGatherer.getID(e));
-        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> PropertyGatherer.getFields(e));
+        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> POJOPropertyGetSet.getID(e));
+        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> POJOPropertyGetSet.getFields(e));
     }
 
     @Test
@@ -71,9 +71,9 @@ public class PropertyGathererTest {
         }
         TestEmployee3 e = new TestEmployee3();
 
-        Assertions.assertThrows(NoSORMIDFoundException.class, () -> PropertyGatherer.getID(e));
+        Assertions.assertThrows(NoSORMIDFoundException.class, () -> POJOPropertyGetSet.getID(e));
 
-        List<DataField<Object>> l = PropertyGatherer.getFields(e);
+        List<DataField<Object>> l = POJOPropertyGetSet.getFields(e);
         Assert.assertEquals("Billy Bob", l.get(0).getValue());
         Assert.assertEquals(SQLDataType.TEXT, l.get(0).getDataType());
         Assert.assertEquals(45, l.get(1).getValue());
@@ -91,7 +91,7 @@ public class PropertyGathererTest {
             int age = 45;
         }
         TestEmployee4 e = new TestEmployee4();
-        List<DataField<Object>> l = PropertyGatherer.getFields(e);
+        List<DataField<Object>> l = POJOPropertyGetSet.getFields(e);
         Assert.assertEquals(0, l.size());
     }
 
@@ -108,8 +108,8 @@ public class PropertyGathererTest {
             private int age = 45;
         }
         TestEmployee5 e = new TestEmployee5();
-        DataField<?> d = PropertyGatherer.getID(e);
-        List<DataField<Object>> l = PropertyGatherer.getFields(e);
+        DataField<?> d = POJOPropertyGetSet.getID(e);
+        List<DataField<Object>> l = POJOPropertyGetSet.getFields(e);
         Assert.assertEquals("872DHAYU2138DJ", d.getValue());
         Assert.assertEquals(SQLDataType.TEXT, d.getDataType());
         Assert.assertEquals("Billy Bob", l.get(0).getValue());
@@ -143,7 +143,7 @@ public class PropertyGathererTest {
             TestReference o2 = new TestReference(123);
         }
         TestEmployee6 e = new TestEmployee6();
-        List<DataReference<Object>> l = PropertyGatherer.getReference(e);
+        List<DataReference<Object>> l = POJOPropertyGetSet.getReference(e);
         Assert.assertEquals(2, l.size());
         Assert.assertEquals(e.o, l.get(0).getREFERENCE());
         Assert.assertEquals(e.o2, l.get(1).getREFERENCE());
@@ -162,7 +162,7 @@ public class PropertyGathererTest {
             private int age = 45;
         }
         TestEmployee6 e = new TestEmployee6();
-        List<DataReference<Object>> l = PropertyGatherer.getReference(e);
+        List<DataReference<Object>> l = POJOPropertyGetSet.getReference(e);
         Assert.assertEquals(0, l.size());
     }
 
@@ -182,6 +182,6 @@ public class PropertyGathererTest {
             Object o2 = new Object();
         }
         TestEmployee7 e = new TestEmployee7();
-        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> PropertyGatherer.getReference(e));
+        Assertions.assertThrows(NoSORMObjectFoundException.class, () -> POJOPropertyGetSet.getReference(e));
     }
 }

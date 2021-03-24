@@ -1,6 +1,5 @@
 package dev.database;
 
-import dev.model.exception.ConstraintViolationException;
 import java.util.Optional;
 
 /**
