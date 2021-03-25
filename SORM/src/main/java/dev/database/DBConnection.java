@@ -22,7 +22,9 @@ public class DBConnection {
      */
     private final Map<String, String> CONNECTION_INFORMATION;
 
-
+    /**
+     * Constructor gathers connection information by calling {@link ConnectionConfiguration}
+     */
     private DBConnection(){
         this.CONNECTION_INFORMATION = ConnectionConfiguration.getDBConnectionInformation("./src/main/resources/DB_Connection.xml");
     }
