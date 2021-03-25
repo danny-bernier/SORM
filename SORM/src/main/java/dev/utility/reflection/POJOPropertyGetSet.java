@@ -7,7 +7,6 @@ import dev.model.database.DataReference;
 import dev.model.exception.NoSORMIDFoundException;
 import dev.model.exception.NoSORMObjectFoundException;
 import dev.model.exception.SORMAccessException;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

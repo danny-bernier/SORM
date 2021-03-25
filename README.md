@@ -28,4 +28,4 @@
 * JaCoCo
 * Reflections
 * H2
-* Judah's TypeTools
+* XML & XSD
