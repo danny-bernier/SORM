@@ -1,4 +1,5 @@
 
+import dev.SORM;
 import dev.database.SORMDAO;
 import dev.model.annotation.*;
 import dev.model.database.DataField;
@@ -9,6 +10,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.Future;
 
 public class TestDriver {
     public static void main(String[] args) throws Exception {
@@ -160,29 +162,38 @@ public class TestDriver {
 //            }
 //        }
         //---------------------------------------------------------------------------
-        User u = new User("Bob", "b@g.com", 23, new Car("Toyota", "Truck", 999000));
-        SORMDAO<User, Integer> dao = new SORMDAO<>(User.class, Integer.class);
-        System.out.println(dao.create(u));
-        Optional<User> ou = dao.getById(23);
-        System.out.println(ou.isPresent());
-        System.out.println(u = ou.get());
-        System.out.println(u.myCar);
-        User u2 = new User("Tony", "T@T.com", 23, new Car("Toyota", "Truck", 999000));
-        dao.update(u2);
-        ou = dao.getById(23);
-        System.out.println(ou.isPresent());
-        System.out.println(u = ou.get());
-        System.out.println(u.myCar);
-        Car c = new Car("Subaru", "Truck", 999000);
-        SORMDAO<Car, Integer> daoCar = new SORMDAO<>(Car.class, Integer.class);
-        daoCar.update(c);
-        ou = dao.getById(23);
-        System.out.println(ou.isPresent());
-        System.out.println(u = ou.get());
-        System.out.println(u.myCar);
-        dao.delete(u2);
-        ou = dao.getById(23);
-        System.out.println(ou.isPresent());
+//        User u = new User("Bob", "b@g.com", 23, new Car("Toyota", "Truck", 999000));
+//        SORMDAO<User, Integer> dao = new SORMDAO<>(User.class, Integer.class);
+//        System.out.println(dao.create(u));
+//        Optional<User> ou = dao.getById(23);
+//        System.out.println(ou.isPresent());
+//        System.out.println(u = ou.get());
+//        System.out.println(u.myCar);
+//        User u2 = new User("Tony", "T@T.com", 23, new Car("Toyota", "Truck", 999000));
+//        dao.update(u2);
+//        ou = dao.getById(23);
+//        System.out.println(ou.isPresent());
+//        System.out.println(u = ou.get());
+//        System.out.println(u.myCar);
+//        Car c = new Car("Subaru", "Truck", 999000);
+//        SORMDAO<Car, Integer> daoCar = new SORMDAO<>(Car.class, Integer.class);
+//        daoCar.update(c);
+//        ou = dao.getById(23);
+//        System.out.println(ou.isPresent());
+//        System.out.println(u = ou.get());
+//        System.out.println(u.myCar);
+//        dao.delete(u2);
+//        ou = dao.getById(23);
+//        System.out.println(ou.isPresent());
+        //--------------------------------------------------------------------------
+        try(SORM sorm = SORM.createSORM();) {
+            User u = new User("Bob", "b@g.com", 23, new Car("Toyota", "Truck", 999000));
+            if(sorm.create(u, User.class, Integer.class).get()) {
+                Future<Optional<User>> fou = sorm.getByID(23, User.class, Integer.class);
+                System.out.println(fou.get().isPresent());
+                System.out.println(fou.get().get());
+            }
+        }
     }
 }
 
