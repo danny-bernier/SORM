@@ -10,7 +10,6 @@ dev\config\ConnectionConfiguration.class
 dev\database\DBConnection$LazyHolder.class
 dev\model\exception\XMLConfigurationException.class
 dev\model\database\DataReference.class
-dev\utility\reflection\PropertyGatherer.class
 dev\model\exception\SORMObjectRetrievalException.class
 dev\model\database\DataField.class
 dev\database\SORMDAO$1.class
@@ -18,6 +17,8 @@ dev\model\annotation\SORMField.class
 dev\model\annotation\SORMID.class
 dev\model\annotation\SORMObject.class
 dev\service\thread\DBThreadService.class
+dev\model\annotation\SORMNoArgConstructor.class
 dev\model\exception\NoSORMObjectFoundException.class
 dev\database\DBConnection.class
 dev\model\annotation\SORMReference.class
+dev\utility\reflection\POJOPropertyGetSet.class

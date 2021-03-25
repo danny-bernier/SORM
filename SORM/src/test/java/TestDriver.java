@@ -167,6 +167,22 @@ public class TestDriver {
         System.out.println(ou.isPresent());
         System.out.println(u = ou.get());
         System.out.println(u.myCar);
+        User u2 = new User("Tony", "T@T.com", 23, new Car("Toyota", "Truck", 999000));
+        dao.update(u2);
+        ou = dao.getById(23);
+        System.out.println(ou.isPresent());
+        System.out.println(u = ou.get());
+        System.out.println(u.myCar);
+        Car c = new Car("Subaru", "Truck", 999000);
+        SORMDAO<Car, Integer> daoCar = new SORMDAO<>(Car.class, Integer.class);
+        daoCar.update(c);
+        ou = dao.getById(23);
+        System.out.println(ou.isPresent());
+        System.out.println(u = ou.get());
+        System.out.println(u.myCar);
+        dao.delete(u2);
+        ou = dao.getById(23);
+        System.out.println(ou.isPresent());
     }
 }
 
@@ -179,7 +195,7 @@ class User{
     @SORMField
     private String email = "";
     @SORMReference
-    public Car myCar = new Car("Ford", "Focus",  83774561);
+    public Car myCar = new Car("", "", 0);
 
     @SORMNoArgConstructor
     private User(){}

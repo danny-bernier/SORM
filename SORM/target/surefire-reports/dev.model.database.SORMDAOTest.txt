@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: dev.model.database.SORMDAOTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec

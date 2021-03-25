@@ -2,6 +2,7 @@ C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\database
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMField.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\XMLConfigurationException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\enumeration\SQLDataType.java
+C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMNoArgConstructor.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMReference.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\SORMReservedKeywordException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\database\DBConnection.java
@@ -12,9 +13,9 @@ C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotati
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\NoSORMIDFoundException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\SORMObjectRetrievalException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\NoSORMObjectFoundException.java
+C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\utility\reflection\POJOPropertyGetSet.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\database\DataField.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\database\SORMDAO.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMObject.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\SORMAccessException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\SORM.java
-C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\utility\reflection\PropertyGatherer.java

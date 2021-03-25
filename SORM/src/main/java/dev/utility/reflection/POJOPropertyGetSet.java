@@ -106,12 +106,10 @@ public class POJOPropertyGetSet {
             for (Field f : o.getClass().getDeclaredFields()) {
                 f.setAccessible(true);
                 if (f.isAnnotationPresent(SORMReference.class)) {
-                    if (f.getName().equalsIgnoreCase("serialization"))
-                        throw new SORMReservedKeywordException("Properties/fields with SORM annotations may not be named 'serialization' as that is a reserved keyword for SORM");
 
                     //todo remove bread
 //                    System.out.println("f.get(o)");
-//                    System.out.println(getID(f.get(o)) + f.getName());
+//                    System.out.println(f.get(o) + f.getName());
 
                     references.add(DataReference.createDataReference(f.get(o), f.getName(), getID(f.get(o))));
                 }

@@ -151,7 +151,7 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                             idField.set(object, resultSet.getBigDecimal(1));
                             break;
                         case TINYINT:
-                            idField.setByte(object, resultSet.getByte(1));
+                            idField.setByte(object, Byte.valueOf(resultSet.getByte(1)));
                             break;
                         case SMALLINT:
                             idField.setShort(object, resultSet.getShort(1));
@@ -285,10 +285,9 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                 }
             }
 
-            //todo log exception information?
         } catch (Exception e){
             //todo remove stacktrace
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return Optional.empty();
     }
@@ -534,54 +533,58 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                 }
             }
             //setting object
-            statement.setObject(2+numberOfFields+numberOfReferences, object);
+            //statement.setObject(2+numberOfFields+numberOfReferences, object);
+
             //setting id for where conditional
             switch (id.getDataType()) {
                 case CHAR:
-                    statement.setString(3+numberOfFields+numberOfReferences, (String) id.getValue());
+                    statement.setString(2+numberOfFields+numberOfReferences, (String) id.getValue());
                     break;
                 case TEXT:
-                    statement.setString(3+numberOfFields+numberOfReferences, (String) id.getValue());
+                    statement.setString(2+numberOfFields+numberOfReferences, (String) id.getValue());
                     break;
                 case BIT:
-                    statement.setBoolean(3+numberOfFields+numberOfReferences, (boolean) id.getValue());
+                    statement.setBoolean(2+numberOfFields+numberOfReferences, (boolean) id.getValue());
                     break;
                 case NUMERIC:
-                    statement.setBigDecimal(3+numberOfFields+numberOfReferences, (BigDecimal) id.getValue());
+                    statement.setBigDecimal(2+numberOfFields+numberOfReferences, (BigDecimal) id.getValue());
                     break;
                 case TINYINT:
-                    statement.setByte(3+numberOfFields+numberOfReferences, (byte) id.getValue());
+                    statement.setByte(2+numberOfFields+numberOfReferences, (byte) id.getValue());
                     break;
                 case SMALLINT:
-                    statement.setShort(3+numberOfFields+numberOfReferences, (short) id.getValue());
+                    statement.setShort(2+numberOfFields+numberOfReferences, (short) id.getValue());
                     break;
                 case INTEGER:
-                    statement.setInt(3+numberOfFields+numberOfReferences, (int) id.getValue());
+                    statement.setInt(2+numberOfFields+numberOfReferences, (int) id.getValue());
                     break;
                 case BIGINT:
-                    statement.setLong(3+numberOfFields+numberOfReferences, (long) id.getValue());
+                    statement.setLong(2+numberOfFields+numberOfReferences, (long) id.getValue());
                     break;
                 case REAL:
-                    statement.setFloat(3+numberOfFields+numberOfReferences, (float) id.getValue());
+                    statement.setFloat(2+numberOfFields+numberOfReferences, (float) id.getValue());
                     break;
                 case DOUBLE:
-                    statement.setDouble(3+numberOfFields+numberOfReferences, (double) id.getValue());
+                    statement.setDouble(2+numberOfFields+numberOfReferences, (double) id.getValue());
                     break;
                 case DATE:
-                    statement.setDate(3+numberOfFields+numberOfReferences, (Date) id.getValue());
+                    statement.setDate(2+numberOfFields+numberOfReferences, (Date) id.getValue());
                     break;
                 case TIME:
-                    statement.setTime(3+numberOfFields+numberOfReferences, (Time) id.getValue());
+                    statement.setTime(2+numberOfFields+numberOfReferences, (Time) id.getValue());
                     break;
                 case TIMESTAMP:
-                    statement.setTimestamp(3+numberOfFields+numberOfReferences, (Timestamp) id.getValue());
+                    statement.setTimestamp(2+numberOfFields+numberOfReferences, (Timestamp) id.getValue());
                     break;
                 case INVALID:
                     throw new IllegalArgumentException("Data type is INVALID, and not supported");
             }
             //returning execute
             return statement.executeUpdate() > 0;
-        } catch (SQLException e){e.printStackTrace();}
+        } catch (SQLException e){
+            //todo remove stack trace
+            //e.printStackTrace();
+        }
         return false;
     }
 
@@ -889,7 +892,10 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                 }
             }
             return statement.executeUpdate() > 0;
-        } catch (SQLException e){e.printStackTrace();}
+        } catch (SQLException e){
+            //todo remove stack track
+            e.printStackTrace();
+        }
         return false;
     }
 
@@ -959,7 +965,10 @@ public class SORMDAO<T, I> implements DAO<T, I>{
         try(PreparedStatement statement = CONNECTION.prepareStatement(stringBuilder.toString())) {
             statement.execute();
             return true;
-        } catch (Exception e){e.printStackTrace();}
+        } catch (Exception e){
+            //todo remove stack trace
+            e.printStackTrace();
+        }
         return false;
     }
 }

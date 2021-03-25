@@ -1,4 +1,3 @@
-C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\utility\reflection\PropertyGathererTest.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\database\DataFieldTest.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\exception\NoSORMIDFoundExceptionTest.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\exception\XMLConfigurationExceptionTest.java
@@ -9,5 +8,6 @@ C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\database
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\TestDriver.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\enumeration\SQLDataTypeTest.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\exception\NoSORMObjectFoundExceptionTest.java
+C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\utility\reflection\POJOPropertyGetSetTest.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\database\DBConnection1Test.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\test\java\dev\model\exception\SORMObjectRetrievalExceptionTest.java
