@@ -7,12 +7,14 @@ dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee6.class
 dev\model\database\DataReferenceTest.class
 dev\model\database\SORMDAOTest.class
 dev\model\exception\SORMAccessExceptionTest.class
+dev\Car.class
 dev\model\database\FloatObject.class
 dev\model\exception\SORMObjectRetrievalExceptionTest.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee2.class
 dev\config\ConnectionConfigurationTest.class
 dev\model\enumeration\SQLDataTypeTest.class
 dev\model\exception\NoSORMObjectFoundExceptionTest.class
+dev\User.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee.class
 dev\database\DBConnection1Test.class
 User.class
@@ -22,6 +24,7 @@ dev\model\database\LongObject.class
 dev\model\database\ShortObject.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee5.class
 TestDriver.class
+dev\SORMTest.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee3.class
 dev\model\database\BigDecimalObject.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee7.class

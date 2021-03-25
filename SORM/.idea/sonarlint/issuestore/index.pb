@@ -61,10 +61,6 @@ a
 1src/test/java/dev/model/database/SORMDAOTest.java,0\e\0e1ed60d887675ee24624b9f47e46b3b536c0d30
 c
 3src/main/java/dev/model/database/DataReference.java,d\2\d2ce8fe0fc9bbe87bc5ad8d2997439b27b406498
-n
->src/test/java/dev/utility/reflection/PropertyGathererTest.java,7\9\79679b210864d511090f5d9082c36bac53b7a2fa
-j
-:src/main/java/dev/utility/reflection/PropertyGatherer.java,9\b\9b07cdcd4bedad853eb63b29363727b24b72a0d7
 q
 Asrc/main/java/dev/model/exception/NoSORMObjectFoundException.java,d\9\d9d4f7863ea02ad4228a092f2c634215228c0adb
 W
@@ -77,3 +73,9 @@ w
 Gsrc/test/java/dev/model/exception/SORMObjectRetrievalExceptionTest.java,9\d\9dc06197e1db977977ef7d05f1f5daeb93445d90
 g
 7src/test/java/dev/model/database/DataReferenceTest.java,e\5\e535224492e9a80dab008c5341432aad159375a7
+l
+<src/main/java/dev/model/annotation/SORMNoArgConstructor.java,4\a\4a4b13184c0a5dd0348786a92a9590226424da7e
+l
+<src/main/java/dev/utility/reflection/POJOPropertyGetSet.java,e\6\e63738b1ddb1b4d2a53441268d155745efd01f5d
+p
+@src/test/java/dev/utility/reflection/POJOPropertyGetSetTest.java,3\1\3196a0100a994791e1d2b72b1e8b826f4a7c8ab1

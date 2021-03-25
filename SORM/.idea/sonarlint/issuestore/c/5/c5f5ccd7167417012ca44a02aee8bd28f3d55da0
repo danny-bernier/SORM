@@ -1,18 +1,14 @@
 
-X	java:S125("<This block of commented-out lines of code should be removed.(º†×—8ÜÓ©…†/
-C
-java:S1452"&Remove usage of generic wildcard type.(èÚâÇ8²Ò×®…/
-9
-java:S2326"I is not used in the method.(èÚâÇ8ÜÓ©…†/
-w	java:S116"[Rename this field "THREAD_POOL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øù¦Ğ8×ûï­…/
-X	java:S125"<This block of commented-out lines of code should be removed.(êˆä²8šìª…†/
->
-java:S1170"!Make this final field static too.(øù¦Ğ8×ûï­…/
+N
+java:S1135P"2Complete the task associated to this TODO comment.(áÃh8š”ı¶†/
 T
 java:S1135"2Complete the task associated to this TODO comment.(É±‘ıüÿÿÿÿ8õµØ®…/
-W	java:S125"<This block of commented-out lines of code should be removed.(ä³¿U8ÜÓ©…†/
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İ šÎÿÿÿÿÿ8’ÛÁ®…/
-K
-java:S1172")Remove this unused method parameter "ID".(İ šÎÿÿÿÿÿ8šìª…†/
-J
-java:S1172"-Remove this unused method parameter "object".(èÚâÇ8ş®ê³…/
+|	java:S116"[Rename this field "THREAD_POOL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ûä¼øÿÿÿÿ8×ûï­…/
+p
+java:S1602>"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8õ™ø¶†/
+N
+java:S1135S"2Complete the task associated to this TODO comment.(áÃh8±­ı¶†/
+p
+java:S1602/"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ƒö¶†/
+p
+java:S1602 "SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ÛÉó¶†/

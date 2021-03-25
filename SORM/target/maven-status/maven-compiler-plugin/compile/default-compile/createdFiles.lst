@@ -2,7 +2,6 @@ dev\database\DAO.class
 dev\database\DBConnection$1.class
 dev\model\enumeration\SQLDataType.class
 dev\model\exception\NoSORMIDFoundException.class
-dev\model\exception\SORMReservedKeywordException.class
 dev\model\exception\SORMAccessException.class
 dev\database\SORMDAO.class
 dev\SORM.class
@@ -19,6 +18,8 @@ dev\model\annotation\SORMObject.class
 dev\service\thread\DBThreadService.class
 dev\model\annotation\SORMNoArgConstructor.class
 dev\model\exception\NoSORMObjectFoundException.class
+dev\utility\reflection\POJOPropertyGetSet$1.class
 dev\database\DBConnection.class
+dev\utility\datatype\SQLDataTypeBranching.class
 dev\model\annotation\SORMReference.class
 dev\utility\reflection\POJOPropertyGetSet.class

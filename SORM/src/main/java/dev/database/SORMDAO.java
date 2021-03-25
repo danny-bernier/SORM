@@ -8,6 +8,7 @@ import dev.model.exception.SORMObjectRetrievalException;
 import dev.utility.reflection.POJOPropertyGetSet;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.List;
@@ -53,16 +54,11 @@ public class SORMDAO<T, I> implements DAO<T, I>{
 
         //return empty if there isn't even a table for the object's class
         if(!objectTableExists(OBJECT_T_CLASS)) {
-            //todo remove breadcrumb
-//            System.out.println("no table");
             return Optional.empty();
         }
 
         String idFieldName = POJOPropertyGetSet.getIDNameByClass(OBJECT_T_CLASS);
         DataField<Object> idDataField = DataField.createDataField(id, idFieldName);
-        //todo remove bread
-//        System.out.println("Id value to select in " + OBJECT_T_CLASS.getSimpleName());
-//        System.out.println(id);
 
         try (PreparedStatement statement = CONNECTION.prepareStatement("select * from " + OBJECT_T_CLASS.getSimpleName() + " where " + idFieldName + " = ?")) {
             switch (idDataField.getDataType()) {
@@ -111,185 +107,15 @@ public class SORMDAO<T, I> implements DAO<T, I>{
 
             //getting result set
             ResultSet resultSet = statement.executeQuery();
-            resultSet.next();
 
-            //todo remove breadcrum
-//            System.out.println(resultSet.getMetaData().getColumnCount());
-//            System.out.println(OBJECT_T_CLASS.getSimpleName());
-//            System.out.println(idFieldName);
-//            System.out.println(idDataField.getValue());
-
-            //Creating Object
-            Constructor[] constructors = OBJECT_T_CLASS.getDeclaredConstructors();
-            Constructor noArg;
-            for (Constructor c:constructors) {
-                if (c.isAnnotationPresent(SORMNoArgConstructor.class)) {
-
-                    //todo remove breadcrumb
-                    //System.out.println("found constructor with annotation");
-
-                    c.setAccessible(true);
-                    T object = OBJECT_T_CLASS.cast(c.newInstance());
-
-                    idDataField = POJOPropertyGetSet.getID(object);
-                    List<DataField<Object>> fields = POJOPropertyGetSet.getFields(object);
-                    List<DataReference<Object>> references = POJOPropertyGetSet.getReference(object);
-
-                    Field idField = OBJECT_T_CLASS.getDeclaredField(idDataField.getValueFieldName());
-                    idField.setAccessible(true);
-                    switch (idDataField.getDataType()) {
-                        case CHAR:
-                            idField.setChar(object, resultSet.getString(1).charAt(0));
-                            break;
-                        case TEXT:
-                            idField.set(object, resultSet.getString(1));
-                            break;
-                        case BIT:
-                            idField.setBoolean(object, resultSet.getBoolean(1));
-                            break;
-                        case NUMERIC:
-                            idField.set(object, resultSet.getBigDecimal(1));
-                            break;
-                        case TINYINT:
-                            idField.setByte(object, Byte.valueOf(resultSet.getByte(1)));
-                            break;
-                        case SMALLINT:
-                            idField.setShort(object, resultSet.getShort(1));
-                            break;
-                        case INTEGER:
-                            idField.setInt(object, resultSet.getInt(1));
-                            break;
-                        case BIGINT:
-                            idField.setLong(object, resultSet.getLong(1));
-                            break;
-                        case REAL:
-                            idField.setFloat(object, resultSet.getFloat(1));
-                        case DOUBLE:
-                            idField.setDouble(object, resultSet.getDouble(1));
-                            break;
-                        case DATE:
-                            idField.set(object, resultSet.getDate(1));
-                            break;
-                        case TIME:
-                            idField.set(object, resultSet.getTime(1));
-                            break;
-                        case TIMESTAMP:
-                            idField.set(object, resultSet.getTimestamp(1));
-                            break;
-                        case INVALID:
-                            throw new IllegalArgumentException("Data type is INVALID, and not supported");
-                    }
-
-                    for(int i = 0; i < fields.size(); i++){
-                        Field f = OBJECT_T_CLASS.getDeclaredField(fields.get(i).getValueFieldName());
-                        f.setAccessible(true);
-                        switch (fields.get(i).getDataType()) {
-                            case CHAR:
-                                f.setChar(object, resultSet.getString(2+i).charAt(0));
-                                break;
-                            case TEXT:
-                                f.set(object, resultSet.getString(2+i));
-                                break;
-                            case BIT:
-                                f.setBoolean(object, resultSet.getBoolean(2+i));
-                                break;
-                            case NUMERIC:
-                                f.set(object, resultSet.getBigDecimal(2+i));
-                                break;
-                            case TINYINT:
-                                f.setByte(object, resultSet.getByte(2+i));
-                                break;
-                            case SMALLINT:
-                                f.setShort(object, resultSet.getShort(2+i));
-                                break;
-                            case INTEGER:
-                                f.setInt(object, resultSet.getInt(2+i));
-                                break;
-                            case BIGINT:
-                                f.setLong(object, resultSet.getLong(2+i));
-                                break;
-                            case REAL:
-                                f.setFloat(object, resultSet.getFloat(2+i));
-                                break;
-                            case DOUBLE:
-                                f.setDouble(object, resultSet.getDouble(2+i));
-                                break;
-                            case DATE:
-                                f.set(object, resultSet.getDate(2+i));
-                                break;
-                            case TIME:
-                                f.set(object, resultSet.getTime(2+i));
-                                break;
-                            case TIMESTAMP:
-                                f.set(object, resultSet.getTimestamp(2+i));
-                                break;
-                            case INVALID:
-                                throw new IllegalArgumentException("Data type is INVALID, and not supported");
-                        }
-                    }
-
-                    for(int i = 0; i < references.size(); i++){
-                        Class ftClass = references.get(i).getREFERENCE().getClass();
-                        Class fiClass = references.get(i).getREFERENCES_ID().getValue().getClass();
-                        Field f = OBJECT_T_CLASS.getDeclaredField(references.get(i).getREFERENCE_NAME());
-                        f.setAccessible(true);
-
-                        //todo remove breadcrumb
-//                        System.out.println("HERE");
-//                        System.out.println(references.get(i).getREFERENCES_ID().getValue());
-
-                        switch (references.get(i).getREFERENCES_ID().getDataType()) {
-                            case CHAR:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getString(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case TEXT:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getString(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case BIT:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getBoolean(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case NUMERIC:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getBigDecimal(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case TINYINT:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getByte(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case SMALLINT:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getShort(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case INTEGER:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getInt(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case BIGINT:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getLong(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case REAL:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getFloat(references.get(i).getREFERENCE_NAME())).get());
-                            case DOUBLE:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getDouble(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case DATE:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getDate(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case TIME:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getTime(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case TIMESTAMP:
-                                f.set(object, new SORMDAO<>(ftClass, fiClass).getById(resultSet.getTimestamp(references.get(i).getREFERENCE_NAME())).get());
-                                break;
-                            case INVALID:
-                                throw new IllegalArgumentException("Data type is INVALID, and not supported");
-                        }
-                    }
-                    return Optional.of(OBJECT_T_CLASS.cast(object));
-                }
+            try {
+                return POJOPropertyGetSet.buildObject(id, resultSet, OBJECT_T_CLASS);
+            } catch (Exception ignored) {
+                //todo remove stack trace
+                //ignored.printStackTrace();
+                return Optional.empty();
             }
-
-        } catch (Exception e){
-            //todo remove stacktrace
-            //e.printStackTrace();
         }
-        return Optional.empty();
     }
 
 
@@ -392,7 +218,6 @@ public class SORMDAO<T, I> implements DAO<T, I>{
         //executing sql statement to create table
         try(PreparedStatement statement = CONNECTION.prepareStatement(stringBuilder.toString())) {
             //setting id (primary key)
-            //todo find a more elegent solution
             switch (id.getDataType()) {
                 case CHAR:
                     statement.setString(1, (String) id.getValue());
@@ -532,8 +357,6 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                         throw new IllegalArgumentException("Data type is INVALID, and not supported");
                 }
             }
-            //setting object
-            //statement.setObject(2+numberOfFields+numberOfReferences, object);
 
             //setting id for where conditional
             switch (id.getDataType()) {
@@ -579,6 +402,7 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                 case INVALID:
                     throw new IllegalArgumentException("Data type is INVALID, and not supported");
             }
+
             //returning execute
             return statement.executeUpdate() > 0;
         } catch (SQLException e){
@@ -594,10 +418,11 @@ public class SORMDAO<T, I> implements DAO<T, I>{
      * @throws SORMAccessException
      */
     @Override
-    public void delete(T object) throws SORMAccessException {
+    public boolean delete(T object) throws SORMAccessException {
         if(object == null)
-            return;
+            return true;
         deleteHelper(object);
+        return true;
     }
 
     /**
@@ -713,9 +538,6 @@ public class SORMDAO<T, I> implements DAO<T, I>{
         int numberOfFields = 0;
         int numberOfReferences = 0;
 
-        //todo remove bread
-        //System.out.println(references);
-
         //recursive call to add reference / foreign keys first to reference them later on
         for (DataReference<Object> ref:references) {
             if(!addObject(ref.getREFERENCE()))
@@ -751,7 +573,6 @@ public class SORMDAO<T, I> implements DAO<T, I>{
         //executing sql statement to create table
         try(PreparedStatement statement = CONNECTION.prepareStatement(stringBuilder.toString())) {
             //setting id (primary key)
-            //todo find a more elegent solution
             switch (id.getDataType()) {
                 case CHAR:
                     statement.setString(1, String.valueOf(id.getValue()));
@@ -891,10 +712,11 @@ public class SORMDAO<T, I> implements DAO<T, I>{
                         throw new IllegalArgumentException("Data type is INVALID, and not supported");
                 }
             }
+
             return statement.executeUpdate() > 0;
         } catch (SQLException e){
             //todo remove stack track
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return false;
     }
@@ -957,17 +779,13 @@ public class SORMDAO<T, I> implements DAO<T, I>{
         stringBuilder.setLength(stringBuilder.length() - 2);
         stringBuilder.append(")");
 
-        //todo remobe bread
-//        System.out.println("String builder in create table");
-//        System.out.println(stringBuilder);
-
         //executing sql statement to create table
         try(PreparedStatement statement = CONNECTION.prepareStatement(stringBuilder.toString())) {
             statement.execute();
             return true;
         } catch (Exception e){
             //todo remove stack trace
-            e.printStackTrace();
+            //e.printStackTrace();
         }
         return false;
     }

@@ -5,6 +5,8 @@ import dev.model.annotation.*;
 import dev.model.exception.SORMAccessException;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.*;
@@ -151,6 +153,30 @@ public class SORMDAOTest {
         Optional<DoubleObject> xo = dao.getById(13.13);
         Assert.assertTrue(xo.isPresent());
         Assert.assertEquals(13.13, xo.get().id, 0.0);
+    }
+
+    @Test
+    public void SORMNullObjectCreate() throws SQLException, SORMAccessException {
+        SORMDAO<Potato, Integer> dao = new SORMDAO<>(Potato.class, Integer.class);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> dao.create(null));
+    }
+
+    @Test
+    public void SORMNullObjectGetById() throws SQLException, SORMAccessException {
+        SORMDAO<Potato, Integer> dao = new SORMDAO<>(Potato.class, Integer.class);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> dao.getById(null));
+    }
+
+    @Test
+    public void SORMNullObjectDelete() throws SQLException, SORMAccessException {
+        SORMDAO<Potato, Integer> dao = new SORMDAO<>(Potato.class, Integer.class);
+        Assert.assertTrue(dao.delete(null));
+    }
+
+    @Test
+    public void SORMNullObjectUpdate() throws SQLException, SORMAccessException {
+        SORMDAO<Potato, Integer> dao = new SORMDAO<>(Potato.class, Integer.class);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> dao.update(null));
     }
 }
 

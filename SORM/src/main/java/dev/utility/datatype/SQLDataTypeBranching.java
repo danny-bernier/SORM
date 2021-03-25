@@ -1,2 +1,5 @@
-package dev.utility.datatype;public class SQLDataTypeBranching {
+package dev.utility.datatype;
+
+public class SQLDataTypeBranching {
+
 }

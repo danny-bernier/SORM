@@ -36,5 +36,5 @@ public interface DAO<T, I> {
      * Deletes a database entry representing an object
      * @param object The object being deleted from the database
      */
-    void delete(T object) throws Exception;
+    boolean delete(T object) throws Exception;
 }

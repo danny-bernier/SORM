@@ -1,40 +1,202 @@
 
-V
-java:S1481Á"3Remove this unused "numberOfFields" local variable.(Û¡Íøıÿÿÿÿ8é †/
-U
-java:S1481Â"7Remove this unused "numberOfReferences" local variable.(Ùéˆû8»”«†/
 O
-java:S1135ğ"2Complete the task associated to this TODO comment.(Œ§>8»”«†/
-T
-java:S1135z"2Complete the task associated to this TODO comment.(Ğ—¬øÿÿÿÿ8ï¥Ò†/
-Š
-java:S1192g"hDefine a constant instead of duplicating this literal "Data type is INVALID, and not supported" 9 times.(”çÒğûÿÿÿÿ8»”«†/
-H
-java:S1481¯"*Remove this unused "field" local variable.(Êó’Ó8»”«†/
-e
-java:S1192Í"GDefine a constant instead of duplicating this literal " = ?, " 3 times.(ÛãÑ‰8»”«†/
-R
-java:S1066ê"/Merge this if statement with the enclosing one.(‰Šïíıÿÿÿÿ8»”«†/
-u
-java:S3776°"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(•š¤úøÿÿÿÿ8»”«†/
+java:S3011×",This accessibility bypass should be removed.(‹Æ‚ûıÿÿÿÿ8á «†/
 U
-java:S1135â"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+java:S1135À"2Complete the task associated to this TODO comment.(ğ»µÁøÿÿÿÿ8Ë›»®†/
+P
+java:S1135í"2Complete the task associated to this TODO comment.(Ù¡ëª8³Ïï­†/
+n	java:S128Š"LEnd this switch case with an unconditional break, return or throw statement.(ÈıÏûÿÿÿÿ8Ë›»®†/
+J
+java:S3011ö",This accessibility bypass should be removed.(ÚãÉÆ8Ë›»®†/
+‹
+java:S1192m"iDefine a constant instead of duplicating this literal "Data type is INVALID, and not supported" 12 times.(”çÒğûÿÿÿÿ8…¥÷ª†/
+O
+java:S3011ˆ",This accessibility bypass should be removed.(ÇÉîüÿÿÿÿ8Ë›»®†/
+O
+java:S1135€"2Complete the task associated to this TODO comment.(Õ›…s8© »µ†/
 U
-java:S1135Á"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+java:S1135Ñ"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8Ë›»®†/
+^	java:S125"<This block of commented-out lines of code should be removed.(•¾ùÒøÿÿÿÿ8ˆ‰®µ†/
 U
-java:S1135 "2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
-v	java:S116"URename this field "ID_I_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
-ƒ
-java:S1192‹"`Define a constant instead of duplicating this literal "Parameter object cannot be null" 3 times.(ó˜Ëİùÿÿÿÿ8»”«†/
+java:S3655ó"7Call "Optional#isPresent()" before accessing the value.(ÚãÉÆ8Ë›»®†/
+U
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(Ã÷õ8Ë›»®†/
 v	java:S116"URename this field "CONNECTION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤œ²íÿÿÿÿÿ8…•ã³…/
+O
+java:S3011¨",This accessibility bypass should be removed.(ŒÚŸïıÿÿÿÿ8á «†/
+J
+java:S3011¿",This accessibility bypass should be removed.(¥åÅı8á «†/
+J
+java:S3011”",This accessibility bypass should be removed.(Ì•Ñ8ôï«†/
+J
+java:S3011İ",This accessibility bypass should be removed.(£ÛüÑ8á «†/
+O
+java:S1135¡"2Complete the task associated to this TODO comment.(Œ§>8Ë›»®†/
 U
-java:S1135Ï"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
-M
-java:S1481½"/Remove this unused "dataFields" local variable.(ñƒ€¿8»”«†/
+java:S1135ê"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8Ë›»®†/
+P
+java:S1135¡"2Complete the task associated to this TODO comment.(Õ”ÎÃ8Ë›»®†/
+O
+java:S1135?"2Complete the task associated to this TODO comment.(›íÏÆ8¨Ç®­†/
+O
+java:S3011±",This accessibility bypass should be removed.(´ÑÛüÿÿÿÿ8á «†/
+O
+java:S3011Å",This accessibility bypass should be removed.(ûóàóşÿÿÿÿ8á «†/
+L
+java:S3740}"/Provide the parametrized type for this generic.(â–î™8…¥÷ª†/
+R
+java:S3740é"/Provide the parametrized type for this generic.(¹”Úİşÿÿÿÿ8…¥÷ª†/
+J
+java:S3011",This accessibility bypass should be removed.(Ã÷õ8Ë›»®†/
+O
+java:S3011¹",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8á «†/
 u	java:S116"YRename this field "OBJECT_T_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®œå–8…•ã³…/
 O
-java:S1135‘"2Complete the task associated to this TODO comment.(Œ§>8»”«†/
-F
-java:S1481µ"(Remove this unused "ref" local variable.(’µˆş8»”«†/
+java:S3011",This accessibility bypass should be removed.(¿°Œşøÿÿÿÿ8ôï«†/
+P
+java:S1068".Remove this unused "ID_I_CLASS" private field.(ÙŒÜèÿÿÿÿÿ8·”Ö«†/
+Y	java:S125Ê"<This block of commented-out lines of code should be removed.(†€éˆ8õšºµ†/
+^	java:S125Á"<This block of commented-out lines of code should be removed.(µìÆüÿÿÿÿ8÷«¼®†/
+O
+java:S3011ƒ",This accessibility update should be removed.(¸Ò†’üÿÿÿÿ8…¥÷ª†/
+O
+java:S3011“",This accessibility bypass should be removed.(ÂÂµâøÿÿÿÿ8Ë›»®†/
+e
+java:S1192C"HDefine a constant instead of duplicating this literal " where " 3 times.(¿Çø‹8…¥÷ª†/
+J
+java:S3011ÿ",This accessibility bypass should be removed.(œ¶í×8Ë›»®†/
+O
+java:S11358"2Complete the task associated to this TODO comment.(Ù¡ëª8İøª†/
+Z
+java:S3655ü"7Call "Optional#isPresent()" before accessing the value.(Ò—¬úúÿÿÿÿ8Ë›»®†/
+O
+java:S3011«",This accessibility bypass should be removed.(²¿§üÿÿÿÿ8á «†/
 U
-java:S1135Á"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8»”«†/
+java:S3655ÿ"7Call "Optional#isPresent()" before accessing the value.(œ¶í×8Ë›»®†/
+O
+java:S3011ë",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8³Ïï­†/
+O
+java:S3011È",This accessibility bypass should be removed.(”³¡±ûÿÿÿÿ8á «†/
+V
+java:S1481î"3Remove this unused "numberOfFields" local variable.(Û¡Íøıÿÿÿÿ8³Ïï­†/
+U
+java:S3655ö"7Call "Optional#isPresent()" before accessing the value.(ÚãÉÆ8Ë›»®†/
+ƒ
+java:S1192³"`Define a constant instead of duplicating this literal "Parameter object cannot be null" 3 times.(ó˜Ëİùÿÿÿÿ8Ë›»®†/
+U
+java:S3655–"7Call "Optional#isPresent()" before accessing the value.(¡•ñ¡8Ë›»®†/
+O
+java:S3011¦",This accessibility bypass should be removed.(îË®Îıÿÿÿÿ8ôï«†/
+O
+java:S3011Â",This accessibility bypass should be removed.(Á­•³ûÿÿÿÿ8á «†/
+P
+java:S1135É"2Complete the task associated to this TODO comment.(Õ”ÎÃ8İş»µ†/
+M
+java:S3740è"/Provide the parametrized type for this generic.(¾µµš8³Ïï­†/
+]	java:S125u"<This block of commented-out lines of code should be removed.(ÌµİŸüÿÿÿÿ8ÿ®¬µ†/
+e
+java:S1192õ"GDefine a constant instead of duplicating this literal " = ?, " 3 times.(ÛãÑ‰8Ë›»®†/
+J
+java:S3011Î",This accessibility bypass should be removed.(ÁÒ¿Ä8á «†/
+R
+java:S1066"/Merge this if statement with the enclosing one.(‰Šïíıÿÿÿÿ8Ë›»®†/
+P
+java:S1135€"2Complete the task associated to this TODO comment.(Ù¡ëª8›ùª†/
+U
+java:S1135ò"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8Ë›»®†/
+T
+java:S3655‹"7Call "Optional#isPresent()" before accessing the value.(áúå8Ë›»®†/
+J
+java:S3011ù",This accessibility bypass should be removed.(—€…ˆ8Ë›»®†/
+M
+java:S1135t"2Complete the task associated to this TODO comment.(Õ‘h8Õ—Í«†/
+Z
+java:S3655ˆ"7Call "Optional#isPresent()" before accessing the value.(ÇÉîüÿÿÿÿ8Ë›»®†/
+O
+java:S3011ü",This accessibility bypass should be removed.(Ò—¬úúÿÿÿÿ8Ë›»®†/
+J
+java:S3011®",This accessibility bypass should be removed.(áû¼8á «†/
+P
+java:S1135Ì"2Complete the task associated to this TODO comment.(›íÏÆ8©ŒÈ®†/
+J
+java:S3011ó",This accessibility bypass should be removed.(ÚãÉÆ8Ë›»®†/
+U
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(Ü°óÛ8Ë›»®†/
+U
+java:S1135ü"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8Ë›»®†/
+H
+java:S1481ß"*Remove this unused "field" local variable.(Êó’Ó8Ë›»®†/
+O
+java:S3011…",This accessibility bypass should be removed.(ş¸õŒøÿÿÿÿ8Ë›»®†/
+^	java:S125î"<This block of commented-out lines of code should be removed.(ÿõ„†üÿÿÿÿ8³Ïï­†/
+I
+java:S3011‹",This accessibility bypass should be removed.(áúå8Ë›»®†/
+^	java:S125Í"<This block of commented-out lines of code should be removed.(–á×àùÿÿÿÿ8©ŒÈ®†/
+o
+java:S37761"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¦èú­8âÌÿª†/
+Z
+java:S3655“"7Call "Optional#isPresent()" before accessing the value.(ÂÂµâøÿÿÿÿ8Ë›»®†/
+O
+java:S1135º"2Complete the task associated to this TODO comment.(Œ§>8Ë›»®†/
+F
+java:S1481å"(Remove this unused "ref" local variable.(’µˆş8Ë›»®†/
+J
+java:S3011à",This accessibility bypass should be removed.(û¼ïù8á «†/
+U
+java:S3655‚"7Call "Optional#isPresent()" before accessing the value.(â²…÷8Ë›»®†/
+n	java:S128¥"LEnd this switch case with an unconditional break, return or throw statement.(ÈıÏûÿÿÿÿ8á «†/
+P
+java:S1135É"2Complete the task associated to this TODO comment.(Õ”ÎÃ8õšºµ†/
+U
+java:S3655ù"7Call "Optional#isPresent()" before accessing the value.(—€…ˆ8Ë›»®†/
+X	java:S1259"<This block of commented-out lines of code should be removed.(»Çà8¤Ğ©µ†/
+]	java:S125@"<This block of commented-out lines of code should be removed.(¿Ëİúÿÿÿÿ8¼»«µ†/
+J
+java:S3011–",This accessibility bypass should be removed.(¡•ñ¡8Ë›»®†/
+I
+java:S3011Ë",This accessibility bypass should be removed.(†üÁ	8á «†/
+O
+java:S3011‘",This accessibility bypass should be removed.(½áãşÿÿÿÿ8ôï«†/
+O
+java:S3011Ñ",This accessibility bypass should be removed.( şåüûÿÿÿÿ8á «†/
+v	java:S116"URename this field "ID_I_CLASS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙŒÜèÿÿÿÿÿ8Ì—è¾…/
+O
+java:S3011‹",This accessibility update should be removed.(±®È»ùÿÿÿÿ8”“´§†/
+O
+java:S3011 ",This accessibility bypass should be removed.(“Û˜ğşÿÿÿÿ8ôï«†/
+O
+java:S3011£",This accessibility bypass should be removed.(í ƒ‘ùÿÿÿÿ8ôï«†/
+^	java:S125˜"<This block of commented-out lines of code should be removed.(Ñı¯úÿÿÿÿ8•ö•´†/
+U
+java:S1481ï"7Remove this unused "numberOfReferences" local variable.(Ùéˆû8Ë›»®†/
+G
+java:S1481|"*Remove this unused "noArg" local variable.(Ùµ©†8…¥÷ª†/
+J
+java:S3011",This accessibility bypass should be removed.( ÔÃÈ8ôï«†/
+?
+java:S2153š"Remove the boxing to "Byte".(çäìÅùÿÿÿÿ8ã§Ñµ†/
+O
+java:S3011Ú",This accessibility bypass should be removed.(Ñ°Âøÿÿÿÿ8á «†/
+Z
+java:S3655…"7Call "Optional#isPresent()" before accessing the value.(ş¸õŒøÿÿÿÿ8Ë›»®†/
+R
+java:S1481ê"/Remove this unused "dataFields" local variable.(†³š‚ıÿÿÿÿ8Ë›»®†/
+L
+java:S3740|"/Provide the parametrized type for this generic.(Ùµ©†8İÖ´§†/
+O
+java:S3011¼",This accessibility bypass should be removed.(ŸÆÅîşÿÿÿÿ8á «†/
+J
+java:S3011‚",This accessibility bypass should be removed.(â²…÷8Ë›»®†/
+J
+java:S3011—",This accessibility bypass should be removed.(ˆ¡ßö8ôï«†/
+O
+java:S3011Ô",This accessibility bypass should be removed.(İæ¹³ùÿÿÿÿ8á «†/
+J
+java:S3011",This accessibility bypass should be removed.(Ü°óÛ8Ë›»®†/
+O
+java:S3011š",This accessibility bypass should be removed.(çäìÅùÿÿÿÿ8ôï«†/
+u
+java:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(•š¤úøÿÿÿÿ8Ë›»®†/
+U
+java:S1135‹"2Complete the task associated to this TODO comment.(¡Ô¦©şÿÿÿÿ8Ë›»®†/
+Y	java:S125¢"<This block of commented-out lines of code should be removed.(†€éˆ8Ö¶•¶†/

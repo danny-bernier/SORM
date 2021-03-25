@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="dev.model.enumeration.SQLDataTypeTest" time="0.017" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="dev.model.enumeration.SQLDataTypeTest" time="0.018" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,9 +65,9 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_CHAR" time="0"/>
-  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_DATE" time="0.015"/>
-  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_Null" time="0.001"/>
-  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_REAL" time="0"/>
+  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_DATE" time="0.016"/>
+  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_Null" time="0"/>
+  <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_REAL" time="0.001"/>
   <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_TEXT" time="0"/>
   <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_TIME" time="0"/>
   <testcase classname="dev.model.enumeration.SQLDataTypeTest" name="SQLDataType_BIT" time="0"/>

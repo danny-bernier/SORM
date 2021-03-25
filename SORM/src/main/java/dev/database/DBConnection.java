@@ -9,7 +9,6 @@ import java.util.Map;
 /**
  * Represents a database connection acquisition service
  */
-//todo rewrite to use dependency injection and get rig of this shit singleton
 public class DBConnection {
 
     /**
@@ -24,7 +23,6 @@ public class DBConnection {
     private final Map<String, String> CONNECTION_INFORMATION;
 
 
-    //todo probably not hard code like this but idk
     private DBConnection(){
         this.CONNECTION_INFORMATION = ConnectionConfiguration.getDBConnectionInformation("./src/main/resources/DB_Connection.xml");
     }
@@ -45,9 +43,7 @@ public class DBConnection {
 
         //if a schema was specified
         return DriverManager.getConnection(
-                CONNECTION_INFORMATION.get("url") + "?currentSchema=" + CONNECTION_INFORMATION.get("schema"),
-                CONNECTION_INFORMATION.get("user"),
-                CONNECTION_INFORMATION.get("password"));
+                CONNECTION_INFORMATION.get("url") + "?currentSchema=" + CONNECTION_INFORMATION.get("schema"), CONNECTION_INFORMATION.get("user"), CONNECTION_INFORMATION.get("password"));
     }
 
 

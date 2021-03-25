@@ -44,8 +44,7 @@ public abstract class ConnectionConfiguration {
             Document document = documentBuilder.parse(connectionXMLFile);
 
             if(document == null)
-                throw new XMLConfigurationException("Unable to parse DB_Connection.xml. " +
-                        "\nPlease refer to README.md when setting up DB_Connection.xml");
+                throw new XMLConfigurationException("Unable to parse DB_Connection.xml. " + "\nPlease refer to README.md when setting up DB_Connection.xml");
 
             //getting elements
             NodeList url = document.getElementsByTagName("url");
@@ -55,8 +54,7 @@ public abstract class ConnectionConfiguration {
 
             //checking if any elements are missing from connection
             if(url.item(0) == null || schema.item(0) == null || user.item(0) == null || password.item(0) == null)
-                throw new XMLConfigurationException("One or more elements are missing from DB_Connection.xml. " +
-                        "\nPlease refer to README.md when setting up DB_Connection.xml");
+                throw new XMLConfigurationException("One or more elements are missing from DB_Connection.xml. " + "\nPlease refer to README.md when setting up DB_Connection.xml");
 
             //populating map
             connectionInformation.put("url", url.item(0).getTextContent());
@@ -65,20 +63,15 @@ public abstract class ConnectionConfiguration {
             connectionInformation.put("password", password.item(0).getTextContent());
 
             if(connectionInformation.get("url").equals(""))
-                throw new XMLConfigurationException("Element '<url>' must be specified/cannot be empty in DB_Connection.xml" +
-                        "\nPlease refer to README.md when setting up DB_Connection.xml");
+                throw new XMLConfigurationException("Element '<url>' must be specified/cannot be empty in DB_Connection.xml" + "\nPlease refer to README.md when setting up DB_Connection.xml");
 
             if(connectionInformation.get("user").equals(""))
-                throw new XMLConfigurationException("Element '<user>' must be specified/cannot be empty in DB_Connection.xml" +
-                        "\nPlease refer to README.md when setting up DB_Connection.xml");
+                throw new XMLConfigurationException("Element '<user>' must be specified/cannot be empty in DB_Connection.xml" + "\nPlease refer to README.md when setting up DB_Connection.xml");
 
             return connectionInformation;
 
         } catch (ParserConfigurationException | SAXException e){
-            throw new XMLConfigurationException("Failed to parse xml from DB_Connection.xml: " +
-                    e.getMessage() +
-                    "\nDB_Connection.xml may not be configured correctly." +
-                    "\nPlease refer to README.md when setting up DB_Connection.xml");
+            throw new XMLConfigurationException("Failed to parse xml from DB_Connection.xml: " + e.getMessage() + "\nDB_Connection.xml may not be configured correctly." + "\nPlease refer to README.md when setting up DB_Connection.xml");
 
         } catch (IOException e) {
             throw new XMLConfigurationException("Could not access file DB_Connection.xml: " +

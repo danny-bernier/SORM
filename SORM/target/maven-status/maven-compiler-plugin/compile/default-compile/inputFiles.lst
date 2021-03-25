@@ -1,10 +1,10 @@
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\database\DataReference.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMField.java
+C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\utility\datatype\SQLDataTypeBranching.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\XMLConfigurationException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\enumeration\SQLDataType.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMNoArgConstructor.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\annotation\SORMReference.java
-C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\model\exception\SORMReservedKeywordException.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\database\DBConnection.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\config\ConnectionConfiguration.java
 C:\Users\Daniel\Documents\GitHub\SORM\SORM\SORM\src\main\java\dev\service\thread\DBThreadService.java
