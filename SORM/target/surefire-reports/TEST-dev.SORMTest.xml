@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="dev.SORMTest" time="0.025" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="dev.SORMTest" time="0.031" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.3.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,8 +64,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="dev.SORMTest" name="SORMObjectDeleteTest" time="0.011"/>
-  <testcase classname="dev.SORMTest" name="SORMObjectCreationTest" time="0.004"/>
-  <testcase classname="dev.SORMTest" name="SORMObjectGetByIDTest" time="0.004"/>
-  <testcase classname="dev.SORMTest" name="SORMObjectUpdateTest" time="0.006"/>
+  <testcase classname="dev.SORMTest" name="SORMObjectDeleteTest" time="0.012"/>
+  <testcase classname="dev.SORMTest" name="SORMObjectCreationTest" time="0.007"/>
+  <testcase classname="dev.SORMTest" name="SORMObjectGetByIDTest" time="0.005"/>
+  <testcase classname="dev.SORMTest" name="SORMObjectUpdateTest" time="0.007"/>
 </testsuite>

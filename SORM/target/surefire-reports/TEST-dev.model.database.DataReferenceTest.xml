@@ -67,6 +67,6 @@
   <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_toString" time="0.001"/>
   <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_IllegalDataReference" time="0.001"/>
   <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_hashCode" time="0"/>
-  <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_Equals" time="0"/>
-  <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_ProperDataReference" time="0.001"/>
+  <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_Equals" time="0.001"/>
+  <testcase classname="dev.model.database.DataReferenceTest" name="dataReference_ProperDataReference" time="0"/>
 </testsuite>
