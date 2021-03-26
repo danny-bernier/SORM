@@ -409,7 +409,7 @@ public class SORMDAO<T, I> implements DAO<T, I>{
     }
 
     /**
-     *
+     * Deletes the probided object from the database
      * @param object The object being deleted from the database
      * @throws SORMAccessException
      */
@@ -423,9 +423,9 @@ public class SORMDAO<T, I> implements DAO<T, I>{
 
     /**
      * Helper method for recursive delete
-     * @param object
-     * @param <C>
-     * @throws SORMAccessException
+     * @param object The object to be deleted
+     * @param <C> The datatype of the object
+     * @throws SORMAccessException Thrown when unable to retrieve objects fields marked with {@link dev.model.annotation.SORMID}, {@link dev.model.annotation.SORMObject}, {@link dev.model.annotation.SORMField}, and {@link dev.model.annotation.SORMReference}
      */
     private <C> void deleteHelper(C object) throws SORMAccessException {
         if(object == null)

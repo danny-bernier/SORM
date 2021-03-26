@@ -19,7 +19,7 @@ dev\service\thread\DBThreadService.class
 dev\model\annotation\SORMNoArgConstructor.class
 dev\model\exception\NoSORMObjectFoundException.class
 dev\utility\reflection\POJOPropertyGetSet$1.class
+dev\database\hikaricp\DataSource.class
 dev\database\DBConnection.class
-dev\utility\datatype\SQLDataTypeBranching.class
 dev\model\annotation\SORMReference.class
 dev\utility\reflection\POJOPropertyGetSet.class

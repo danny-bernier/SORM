@@ -4,6 +4,7 @@ dev\model\database\Potato.class
 dev\model\exception\XMLConfigurationExceptionTest.class
 dev\utility\reflection\POJOPropertyGetSetTest$2TestEmployee6.class
 dev\utility\reflection\POJOPropertyGetSetTest$1TestEmployee6.class
+dev\database\hikaricp\DataSourceTest.class
 dev\model\database\DataReferenceTest.class
 dev\model\database\SORMDAOTest.class
 dev\model\exception\SORMAccessExceptionTest.class

@@ -1,6 +1,8 @@
 package dev.database;
 
 import dev.config.ConnectionConfiguration;
+import dev.database.hikaricp.DataSource;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -36,16 +38,14 @@ public class DBConnection {
      * @throws SQLException Thrown when connection creation fails
      */
     public Connection getConnection() throws SQLException {
+
         //if no schema was specified
         if(CONNECTION_INFORMATION.get("schema") == null || CONNECTION_INFORMATION.get("schema").equals(""))
-            return DriverManager.getConnection(
-                    CONNECTION_INFORMATION.get("url"),
+            return new DataSource(CONNECTION_INFORMATION.get("url"),
                     CONNECTION_INFORMATION.get("user"),
-                    CONNECTION_INFORMATION.get("password"));
+                    CONNECTION_INFORMATION.get("password")).getConnection();
 
-        //if a schema was specified
-        return DriverManager.getConnection(
-                CONNECTION_INFORMATION.get("url") + "?currentSchema=" + CONNECTION_INFORMATION.get("schema"), CONNECTION_INFORMATION.get("user"), CONNECTION_INFORMATION.get("password"));
+        return new DataSource(CONNECTION_INFORMATION.get("url") + "?currentSchema=" + CONNECTION_INFORMATION.get("schema"), CONNECTION_INFORMATION.get("user"), CONNECTION_INFORMATION.get("password")).getConnection();
     }
 
 

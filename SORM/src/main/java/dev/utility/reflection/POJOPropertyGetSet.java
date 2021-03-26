@@ -149,6 +149,8 @@ public class POJOPropertyGetSet {
 
                 Field idField = clazz.getDeclaredField(idDataField.getValueFieldName());
                 idField.setAccessible(true);
+
+                //building id field
                 switch (idDataField.getDataType()) {
                     case CHAR:
                         idField.setChar(object, resultSet.getString(1).charAt(0));
@@ -192,6 +194,7 @@ public class POJOPropertyGetSet {
                         throw new IllegalArgumentException("Data type is INVALID, and not supported");
                 }
 
+                //building normal fields
                 for(int i = 0; i < fields.size(); i++){
                     Field f = clazz.getDeclaredField(fields.get(i).getValueFieldName());
                     f.setAccessible(true);
@@ -240,6 +243,7 @@ public class POJOPropertyGetSet {
                     }
                 }
 
+                //building references
                 for(int i = 0; i < references.size(); i++){
                     Class ftClass = references.get(i).getREFERENCE().getClass();
                     Class fiClass = references.get(i).getREFERENCES_ID().getValue().getClass();
