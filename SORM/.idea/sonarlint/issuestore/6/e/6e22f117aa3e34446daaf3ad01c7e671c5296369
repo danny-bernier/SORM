@@ -1,0 +1,7 @@
+
+6
+java:S1700"Rename field "dataSource"(’ÆÊë8¸÷õÞ†/
+w
+java:S3008"ZRename this field "CONNECTION_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ýßûœ8ˆ¯œß†/
+I
+java:S3010"'Remove this assignment of "dataSource".(¶¾ßßüÿÿÿÿ8Î»»ß†/

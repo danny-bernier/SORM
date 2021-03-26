@@ -1,22 +1,151 @@
 
+U
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(â²…÷8Ì‰ÙÏ†/
+M
+java:S3740ø"/Provide the parametrized type for this generic.(¾µµš8Ì‰ÙÏ†/
 O
-java:S1135n"2Complete the task associated to this TODO comment.(›íÏÆ8î“æ«†/
-N
-java:S3011'",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8¯¬°…/
-Q
-java:S3740R"/Provide the parametrized type for this generic.(ÇÒäŞúÿÿÿÿ8Š¬¨ş…/
-t
-java:S1192."WDefine a constant instead of duplicating this literal "One or more fields in " 3 times.(ùµÂÔ8Š¬¨ş…/
-³
-java:S1192."•Define a constant instead of duplicating this literal " could not be read, ensure annotated field is accessible and of a supported datatype" 3 times.(ùµÂÔ8Š¬¨ş…/
-¼
-java:S1192#"™Define a constant instead of duplicating this literal "No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject" 4 times.(Ï“òŸøÿÿÿÿ8ª¦ö³…/
+java:S3011Ë",This accessibility bypass should be removed.(ŸÆÅîşÿÿÿÿ8Ì‰ÙÏ†/
+U
+java:S3655‚"7Call "Optional#isPresent()" before accessing the value.(ÚãÉÆ8Ì‰ÙÏ†/
+Z
+java:S3655Ÿ"7Call "Optional#isPresent()" before accessing the value.(ÂÂµâøÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011ï",This accessibility bypass should be removed.(û¼ïù8Ì‰ÙÏ†/
+J
+java:S3011™",This accessibility bypass should be removed.(Ã÷õ8Ì‰ÙÏ†/
+O
+java:S3011±",This accessibility bypass should be removed.(í ƒ‘ùÿÿÿÿ8Ì‰ÙÏ†/
 \
-java:S1118":Add a private constructor to hide the implicit public one.(åÔÏ¯ÿÿÿÿÿ8Ü‹­†/
+java:S1118":Add a private constructor to hide the implicit public one.(åÔÏ¯ÿÿÿÿÿ8Ü‹­†/
+O
+java:S3011Ñ",This accessibility bypass should be removed.(Á­•³ûÿÿÿÿ8Ì‰ÙÏ†/
+‹
+java:S1192Â"hDefine a constant instead of duplicating this literal "Data type is INVALID, and not supported" 3 times.(”çÒğûÿÿÿÿ8Ì‰ÙÏ†/
+U
+java:S3655‹"7Call "Optional#isPresent()" before accessing the value.(œ¶í×8Ì‰ÙÏ†/
+O
+java:S3011",This accessibility update should be removed.(¸Ò†’üÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011¢",This accessibility bypass should be removed.(Ì•Ñ8Ì‰ÙÏ†/
+J
+java:S3011¥",This accessibility bypass should be removed.(ˆ¡ßö8Ì‰ÙÏ†/
+O
+java:S3011”",This accessibility bypass should be removed.(ÇÉîüÿÿÿÿ8Ì‰ÙÏ†/
 N
-java:S3011@",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
+java:S3011i",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
+O
+java:S3011¨",This accessibility bypass should be removed.(çäìÅùÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011œ",This accessibility bypass should be removed.( ÔÃÈ8Ì‰ÙÏ†/
+n	java:S128³"LEnd this switch case with an unconditional break, return or throw statement.(ÈıÏûÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011ì",This accessibility bypass should be removed.(£ÛüÑ8Ì‰ÙÏ†/
+U
+java:S3655œ"7Call "Optional#isPresent()" before accessing the value.(Ü°óÛ8Ì‰ÙÏ†/
+J
+java:S3011¼",This accessibility bypass should be removed.(áû¼8Ì‰ÙÏ†/
+]
+java:S1854‡"?Remove this useless assignment to local variable "idDataField".(±ëÊ¶8Ì‰ÙÏ†/
+O
+java:S3011æ",This accessibility bypass should be removed.(‹Æ‚ûıÿÿÿÿ8Ì‰ÙÏ†/
+n	java:S128–"LEnd this switch case with an unconditional break, return or throw statement.(ÈıÏûÿÿÿÿ8Ì‰ÙÏ†/
+Z
+java:S3655‘"7Call "Optional#isPresent()" before accessing the value.(ş¸õŒøÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011®",This accessibility bypass should be removed.(“Û˜ğşÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011à",This accessibility bypass should be removed.( şåüûÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011Ÿ",This accessibility bypass should be removed.(½áãşÿÿÿÿ8Ì‰ÙÏ†/
+T
+java:S3655—"7Call "Optional#isPresent()" before accessing the value.(áúå8Ì‰ÙÏ†/
+J
+java:S3011Î",This accessibility bypass should be removed.(¥åÅı8Ì‰ÙÏ†/
+J
+java:S3011…",This accessibility bypass should be removed.(—€…ˆ8Ì‰ÙÏ†/
+M
+java:S3740‹"/Provide the parametrized type for this generic.(Ùµ©†8Ì‰ÙÏ†/
+p
+java:S3776‚"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(‡áÇ8Ì‰ÙÏ†/
+?
+java:S2153¨"Remove the boxing to "Byte".(çäìÅùÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011¹",This accessibility bypass should be removed.(²¿§üÿÿÿÿ8Ì‰ÙÏ†/
 N
-java:S3011k",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
+java:S3011+",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8¯¬°…/
+Z
+java:S3655ˆ"7Call "Optional#isPresent()" before accessing the value.(Ò—¬úúÿÿÿÿ8Ì‰ÙÏ†/
+t
+java:S11920"WDefine a constant instead of duplicating this literal "One or more fields in " 3 times.(ùµÂÔ8Š¬¨ş…/
+O
+java:S3011¶",This accessibility bypass should be removed.(ŒÚŸïıÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011¿",This accessibility bypass should be removed.(´ÑÛüÿÿÿÿ8Ì‰ÙÏ†/
+M
+java:S3740Œ"/Provide the parametrized type for this generic.(â–î™8Ì‰ÙÏ†/
+O
+java:S3011é",This accessibility bypass should be removed.(Ñ°Âøÿÿÿÿ8Ì‰ÙÏ†/
+R
+java:S3740ù"/Provide the parametrized type for this generic.(¹”Úİşÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011´",This accessibility bypass should be removed.(îË®Îıÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011‚",This accessibility bypass should be removed.(ÚãÉÆ8Ì‰ÙÏ†/
+Z
+java:S3655”"7Call "Optional#isPresent()" before accessing the value.(ÇÉîüÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011‹",This accessibility bypass should be removed.(œ¶í×8Ì‰ÙÏ†/
+J
+java:S3011œ",This accessibility bypass should be removed.(Ü°óÛ8Ì‰ÙÏ†/
+O
+java:S3011—",This accessibility update should be removed.(±®È»ùÿÿÿÿ8Ì‰ÙÏ†/
+¼
+java:S1192'"™Define a constant instead of duplicating this literal "No @SORMObject annotation found, ensure classes to be stored are marked with @SORMObject" 4 times.(Ï“òŸøÿÿÿÿ8ª¦ö³…/
+O
+java:S3011×",This accessibility bypass should be removed.(”³¡±ûÿÿÿÿ8Ì‰ÙÏ†/
+U
+java:S3655¢"7Call "Optional#isPresent()" before accessing the value.(¡•ñ¡8Ì‰ÙÏ†/
+I
+java:S3011Ú",This accessibility bypass should be removed.(†üÁ	8Ì‰ÙÏ†/
+J
+java:S3011",This accessibility bypass should be removed.(â²…÷8Ì‰ÙÏ†/
+O
+java:S3011Ô",This accessibility bypass should be removed.(ûóàóşÿÿÿÿ8Ì‰ÙÏ†/
+U
+java:S3655™"7Call "Optional#isPresent()" before accessing the value.(Ã÷õ8Ì‰ÙÏ†/
 N
-java:S3011V",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
-X	java:S125o"<This block of commented-out lines of code should be removed.(æ³Š8‰ğÇ´†/
+java:S3011A",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
+O
+java:S3011«",This accessibility bypass should be removed.(¿°Œşøÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011È",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011û",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011‘",This accessibility bypass should be removed.(ş¸õŒøÿÿÿÿ8Ì‰ÙÏ†/
+O
+java:S3011ˆ",This accessibility bypass should be removed.(Ò—¬úúÿÿÿÿ8Ì‰ÙÏ†/
+U
+java:S3655ÿ"7Call "Optional#isPresent()" before accessing the value.(ÚãÉÆ8Ì‰ÙÏ†/
+³
+java:S11920"•Define a constant instead of duplicating this literal " could not be read, ensure annotated field is accessible and of a supported datatype" 3 times.(ùµÂÔ8Š¬¨ş…/
+J
+java:S3011İ",This accessibility bypass should be removed.(ÁÒ¿Ä8Ì‰ÙÏ†/
+O
+java:S3011ã",This accessibility bypass should be removed.(İæ¹³ùÿÿÿÿ8Ì‰ÙÏ†/
+I
+java:S3011—",This accessibility bypass should be removed.(áúå8Ì‰ÙÏ†/
+J
+java:S3011ÿ",This accessibility bypass should be removed.(ÚãÉÆ8Ì‰ÙÏ†/
+Q
+java:S3740Q"/Provide the parametrized type for this generic.(ÇÒäŞúÿÿÿÿ8Š¬¨ş…/
+U
+java:S3655…"7Call "Optional#isPresent()" before accessing the value.(—€…ˆ8Ì‰ÙÏ†/
+O
+java:S3011Ÿ",This accessibility bypass should be removed.(ÂÂµâøÿÿÿÿ8Ì‰ÙÏ†/
+J
+java:S3011¢",This accessibility bypass should be removed.(¡•ñ¡8Ì‰ÙÏ†/
+N
+java:S3011U",This accessibility update should be removed.(Í”úÆùÿÿÿÿ8Š¬¨ş…/
+H
+java:S1481‹"*Remove this unused "noArg" local variable.(Ùµ©†8Ì‰ÙÏ†/

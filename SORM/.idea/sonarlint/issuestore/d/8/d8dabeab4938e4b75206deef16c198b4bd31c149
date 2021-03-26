@@ -1,9 +1,9 @@
 
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Äìäùÿÿÿÿ8Ø¾—…/
+™
+java:S1192/"}Define a constant instead of duplicating this literal "
+Please refer to README.md when setting up DB_Connection.xml" 6 times.(çîâG8üß–…/
 d
 java:S1610"GConvert the abstract class "ConnectionConfiguration" into an interface.(·±ÒÈ8ç‰±Š…/
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Äìäùÿÿÿÿ8Ø¾—…/
 P
 java:S2755("3Disable access to external entities in XML parsing.(ÅŠ÷á8æĞ™Œ…/
-Ÿ
-java:S11920"}Define a constant instead of duplicating this literal "
-Please refer to README.md when setting up DB_Connection.xml" 6 times.(”ò“Şúÿÿÿÿ8üß–…/

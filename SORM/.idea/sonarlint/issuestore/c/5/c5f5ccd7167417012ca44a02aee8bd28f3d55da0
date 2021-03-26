@@ -1,14 +1,12 @@
 
-N
-java:S1135P"2Complete the task associated to this TODO comment.(áÃh8š”ı¶†/
-T
-java:S1135"2Complete the task associated to this TODO comment.(É±‘ıüÿÿÿÿ8õµØ®…/
-|	java:S116"[Rename this field "THREAD_POOL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ûä¼øÿÿÿÿ8×ûï­…/
 p
-java:S1602>"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8õ™ø¶†/
-N
-java:S1135S"2Complete the task associated to this TODO comment.(áÃh8±­ı¶†/
+java:S1602#"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ÛÉó¶†/
 p
-java:S1602/"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ƒö¶†/
+java:S1602O"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8í‘ÉÎ†/
+|	java:S116"[Rename this field "THREAD_POOL_SIZE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰ûä¼øÿÿÿÿ8×ûï­…/
+C
+java:S1170"!Make this final field static too.(‰ûä¼øÿÿÿÿ8¹ØùÎ†/
 p
-java:S1602 "SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ÛÉó¶†/
+java:S16022"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8ƒö¶†/
+p
+java:S1602A"SRemove useless curly braces around statement and then remove useless return keyword(×œŸ…8õ™ø¶†/
